@@ -287,3 +287,8 @@ footer a{color:var(--navy-700)}
 }
 
 .tabbar img.ti{width:26px;height:26px;display:block;margin:0 auto 2px;object-fit:contain}
+[hidden]{display:none!important}
+.fld select{font:inherit;font-size:16px;appearance:auto}
+.t-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.t-grid .fld input,.t-grid .fld select{min-width:0;width:100%;box-sizing:border-box}
+.t-grid input[type=date]{padding:8px 10px;font-size:15px}
