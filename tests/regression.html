@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ทดสอบถดถอย: แกนเดิม vs แกนใหม่</title>
+<style>
+body{font-family:Sarabun,system-ui,sans-serif;max-width:960px;margin:24px auto;padding:0 16px;color:#13235a;background:#fbf3de}
+h1{font-size:22px}table{border-collapse:collapse;width:100%;background:#fff;margin:10px 0;font-size:14px}
+td,th{border:1px solid #dfc98f;padding:4px 8px;text-align:center}.ok{color:#1b7a3a;font-weight:700}.bad{color:#c2412d;font-weight:700}
+.box{background:#fff;border:1px solid #dfc98f;border-radius:10px;padding:12px 16px;margin:12px 0}button{font:inherit;padding:8px 16px;border-radius:8px;border:0;background:#13235a;color:#fff;cursor:pointer}
+code{background:#f4e7c4;padding:1px 4px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>ทดสอบถดถอย (PLAN ข้อ 6.4)</h1>
+<div class="box">
+  <p>เปิดผ่านเว็บเซิร์ฟเวอร์ (เช่น GitHub Pages หรือ <code>python -m http.server</code> ที่โฟลเดอร์โปรเจกต์) แล้วเปิด <code>/tests/regression.html</code></p>
+  <p>เกณฑ์ผ่าน: (๑) ต้นแบบเทียบตัวเอง คะแนนสองแกนเท่ากัน (๒) ไฟล์ทดสอบ คะแนนรายวรรค ทำนอง/จังหวะ/ท้ายวรรค ต่างกันไม่เกิน ±๑ (๓) segment() เสนอจุดแบ่งห่างจากเวลาเดิมไม่เกิน ๐.๒๕ วินาทีเป็นส่วนใหญ่</p>
+  <p>ไฟล์เสียงทดสอบของครู (วางในโฟลเดอร์ tests/ หรือเลือกที่นี่): <input type="file" id="files" accept="audio/*" multiple> <button id="run">เริ่มทดสอบ</button></p>
+</div>
+<div id="out"></div>
+<script src="../js/forms.js"></script>
+<script src="../js/analyzer.js"></script>
+<script src="../js/segment.js"></script>
+<script>
+(async function () {
+  const out = document.getElementById('out'), NewA = window.Analyzer;
+  const log = h => { const d = document.createElement('div'); d.className = 'box'; d.innerHTML = h; out.appendChild(d); return d; };
+  const actx = new (window.AudioContext || window.webkitAudioContext)();
+  const dec = ab => new Promise((res, rej) => { const p = actx.decodeAudioData(ab, res, rej); if (p && p.catch) p.catch(rej); });
+  const chs = b => { const o = []; for (let c = 0; c < b.numberOfChannels; c++) o.push(b.getChannelData(c).slice()); return o; };
+  let OldA, poem, refBuf;
+  try {
+    const leg = await (await fetch('../_legacy/index.html')).text();
+    const a = leg.indexOf('<script type="text/plain" id="analyzer-src">'), s0 = leg.indexOf('>', a) + 1, s1 = leg.indexOf('</' + 'script>', s0);
+    OldA = new Function(leg.slice(s0, s1) + '\nreturn Analyzer;')();
+    poem = await (await fetch('../poems/yani11.json')).json();
+    refBuf = await dec(await (await fetch('../' + poem.audio.url)).arrayBuffer());
+  } catch (e) { log('<span class="bad">โหลดไม่สำเร็จ: ' + e.message + ' (ต้องเปิดผ่านเว็บเซิร์ฟเวอร์)</span>'); return; }
+  const spec = { t0: poem.refT0, t1: poem.refT1, units: poem.units.map(u => ({ groups: u.groups.map(g => [g.t0, g.t1]) })) };
+  OldA.prepareRef(chs(refBuf), refBuf.sampleRate); NewA.prepareRef(chs(refBuf), refBuf.sampleRate, spec);
+
+  function compare(name, buf) {
+    const o = OldA.score(chs(buf), buf.sampleRate), n = NewA.score(chs(buf), buf.sampleRate, {});
+    if (o.error || n.error) return { name, html: '<tr><td>' + name + '</td><td colspan="5">error เดิม=' + o.error + ' ใหม่=' + n.error + '</td><td class="' + (o.error === n.error ? 'ok' : 'bad') + '">' + (o.error === n.error ? 'ผ่าน' : 'ไม่ผ่าน') + '</td></tr>', pass: o.error === n.error };
+    let md = 0; o.lines.forEach((L, i) => ['melody', 'rhythm', 'ending'].forEach(k => md = Math.max(md, Math.abs(L[k] - n.lines[i][k]))));
+    const pass = md <= 1;
+    return { pass, html: '<tr><td>' + name + '</td><td>' + o.total + ' (ท' + o.melody + ' จ' + o.rhythm + ' ท้าย' + o.ending + ')</td><td>' + n.total + ' (ท' + n.melody + ' จ' + n.rhythm + ' ท้าย' + n.ending + ' ครบ' + n.complete + ')</td><td>' + n.tempo + '</td><td>' + md + '</td><td></td><td class="' + (pass ? 'ok' : 'bad') + '">' + (pass ? 'ผ่าน' : 'ไม่ผ่าน') + '</td></tr>' };
+  }
+  async function runAll() {
+    out.innerHTML = '';
+    const rows = [compare('ต้นแบบเทียบตัวเอง', refBuf)];
+    for (const f of document.getElementById('files').files) { try { rows.push(compare(f.name, await dec(await f.arrayBuffer()))); } catch (e) { rows.push({ pass: false, html: '<tr><td>' + f.name + '</td><td colspan="6" class="bad">ถอดรหัสเสียงไม่ได้</td></tr>' }); } }
+    log('<h3>คะแนน: แกนเดิม vs แกนใหม่</h3><table><tr><th>ไฟล์</th><th>แกนเดิม</th><th>แกนใหม่</th><th>tempo</th><th>ต่างสูงสุดรายวรรค</th><th></th><th>ผล</th></tr>' + rows.map(r => r.html).join('') + '</table>' +
+      (document.getElementById('files').files.length < 2 ? '<p class="bad">ยังขาดเสียงอัดทดสอบของครู ๒ ไฟล์ (อ่านดี ๑, อ่านเร็ว/ไม่เอื้อน ๑)</p>' : ''));
+    const syl = Forms.sylOf(poem.units), sg = NewA.segment(chs(refBuf), refBuf.sampleRate, Forms.shapeOf(poem.units), { syl });
+    let over = 0, tot = 0, mx = 0, tr = '';
+    poem.units.forEach((u, i) => u.groups.forEach((g, j) => {
+      const p = sg.units[i].groups[j], d0 = Math.abs(g.t0 - p[0]), d1 = Math.abs(g.t1 - p[1]);
+      [d0, d1].forEach(d => { tot++; if (d > 0.25) over++; mx = Math.max(mx, d); });
+      tr += '<tr><td>' + (i + 1) + '.' + (j + 1) + '</td><td>' + g.text + '</td><td>' + g.t0 + '–' + g.t1 + '</td><td>' + p[0] + '–' + p[1] + '</td><td class="' + (Math.max(d0, d1) > 0.25 ? 'bad' : 'ok') + '">' + Math.max(d0, d1).toFixed(2) + '</td></tr>';
+    }));
+    log('<h3>segment() เทียบเวลาเดิม</h3><p>ขอบเขต t0/t1 ที่เสนอ: ' + sg.t0 + ' – ' + sg.t1 + ' (เดิม ' + poem.refT0 + ' – ' + poem.refT1 + ') · เกิน ๐.๒๕ วิ: <b>' + over + '/' + tot + '</b> · สูงสุด ' + mx.toFixed(2) + ' วิ · วรรคที่ควรตรวจ: ' + (sg.review.length ? sg.review.map(x => x + 1).join(', ') : 'ไม่มี') + '</p><table><tr><th>ช่วง</th><th>ข้อความ</th><th>เดิม</th><th>เสนอ</th><th>คลาดสูงสุด</th></tr>' + tr + '</table>');
+  }
+  document.getElementById('run').onclick = runAll;
+  runAll();
+})();
+</script>
+</body>
+</html>

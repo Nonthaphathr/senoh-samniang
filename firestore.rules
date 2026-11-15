@@ -1,0 +1,56 @@
+rules_version = '2';
+// เสนาะสำเนียง By ครูนนท์ — PLAN ข้อ 4
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function email() { return request.auth.token.email; }
+    function isAdmin() {
+      return signedIn() && request.auth.token.email_verified == true && email() == 'nonthaphathr@gmail.com';
+    }
+    function isTeacher() {
+      return isAdmin() || (signedIn() && request.auth.token.email_verified == true
+        && exists(/databases/$(database)/documents/teachers/$(email())));
+    }
+    function okAttempt(d) {
+      return d.uid == request.auth.uid
+        && d.name is string && d.name.size() <= 60
+        && d.room is string && d.room.size() <= 24
+        && d.poemId is string && d.poemId.size() <= 80
+        && d.total is number && d.total >= 0 && d.total <= 100
+        && d.final == null
+        && d.pron.status == 'none'
+        && d.audio == null;
+    }
+
+    match /poems/{id} {
+      allow read: if signedIn() && (resource.data.status == 'published' || isTeacher());
+      allow write: if isTeacher();
+    }
+
+    match /attempts/{id} {
+      allow create: if signedIn() && okAttempt(request.resource.data);
+      allow read: if isTeacher() || (signedIn() && resource.data.uid == request.auth.uid);
+      // เจ้าของแก้ได้เฉพาะช่อง audio (หลังอัปโหลดเสียงเบื้องหลัง) ครูแก้ได้ทั้งหมด
+      allow update: if isTeacher() || (signedIn() && resource.data.uid == request.auth.uid
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['audio'])
+        && request.resource.data.audio.fileId is string);
+      allow delete: if isTeacher();
+    }
+
+    match /settings/{id} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+    match /teachers/{mail} {
+      allow read: if isTeacher();
+      allow write: if isAdmin();
+    }
+
+    // ข้อมูลระบบเดิม (ถ้ามี)
+    match /yani11_attempts/{id} {
+      allow read: if isTeacher() || (signedIn() && resource.data.uid == request.auth.uid);
+      allow update, delete: if isTeacher();
+    }
+  }
+}

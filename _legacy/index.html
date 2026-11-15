@@ -1,0 +1,1414 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ระบบสอนอ่านกาพย์ยานี ๑๑ | ครูนนท์</title>
+<meta name="description" content="ฟังต้นแบบ อ่านตาม แล้วให้ระบบสะท้อนผลทำนองเสนาะ กาพย์ยานี ๑๑ รายวรรค">
+<meta name="theme-color" content="#13235a">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="กาพย์ยานี ๑๑">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:title" content="ระบบสอนอ่านกาพย์ยานี ๑๑">
+<meta property="og:description" content="ฟังต้นแบบ อ่านตาม แล้วให้ระบบสะท้อนผลทำนองเสนาะรายวรรค">
+<meta property="og:image" content="assets/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Noto+Serif+Thai:wght@400..700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--t-krajang:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2216%22 viewBox=%220 0 28 16%22%3E%3Cpath fill=%22%23b98618%22 d=%22M14 1C15.2 7.2 19.5 12.2 26 14.2V16H2V14.2C8.5 12.2 12.8 7.2 14 1Z%22/%3E%3C/svg%3E");--t-krajang-gold:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2214%22 viewBox=%220 0 28 16%22%3E%3Cpath fill=%22%23dfa82a%22 d=%22M14 1C15.2 7.2 19.5 12.2 26 14.2V16H2V14.2C8.5 12.2 12.8 7.2 14 1Z%22/%3E%3C/svg%3E");--t-krajang-cream:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2228%22 height=%2216%22 viewBox=%220 0 28 16%22%3E%3Cpath fill=%22%23fbf3de%22 d=%22M14 1C15.2 7.2 19.5 12.2 26 14.2V16H2V14.2C8.5 12.2 12.8 7.2 14 1Z%22/%3E%3C/svg%3E");--t-prajam:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2256%22 height=%2256%22 viewBox=%220 0 56 56%22%3E%3Cg fill=%22none%22 stroke=%22%23efc04a%22 stroke-opacity=%22.22%22 stroke-width=%221.1%22%3E%3Cpath d=%22M28 3L53 28 28 53 3 28Z%22/%3E%3Cpath id=%22p%22 d=%22M28 28C21 23 21 14 28 8C35 14 35 23 28 28Z%22/%3E%3Cpath d=%22M28 28C21 23 21 14 28 8C35 14 35 23 28 28Z%22 transform=%22rotate%2890 28 28%29%22/%3E%3Cpath d=%22M28 28C21 23 21 14 28 8C35 14 35 23 28 28Z%22 transform=%22rotate%28180 28 28%29%22/%3E%3Cpath d=%22M28 28C21 23 21 14 28 8C35 14 35 23 28 28Z%22 transform=%22rotate%28270 28 28%29%22/%3E%3C/g%3E%3Cg fill=%22%23efc04a%22 fill-opacity=%22.22%22%3E%3Ccircle cx=%2228%22 cy=%2228%22 r=%222.2%22/%3E%3Ccircle cx=%220%22 cy=%220%22 r=%222.4%22/%3E%3Ccircle cx=%2256%22 cy=%220%22 r=%222.4%22/%3E%3Ccircle cx=%220%22 cy=%2256%22 r=%222.4%22/%3E%3Ccircle cx=%2256%22 cy=%2256%22 r=%222.4%22/%3E%3C/g%3E%3C/svg%3E");--t-prajam-faint:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2256%22 height=%2256%22 viewBox=%220 0 56 56%22%3E%3Cg fill=%22none%22 stroke=%22%23b98618%22 stroke-opacity=%22.09%22 stroke-width=%221.1%22%3E%3Cpath d=%22M28 3L53 28 28 53 3 28Z%22/%3E%3Cpath id=%22p%22 d=%22M28 28C21 23 21 14 28 8C35 14 35 23 28 28Z%22/%3E%3Cpath d=%22M28 28C21 23 21 14 28 8C35 14 35 23 28 28Z%22 transform=%22rotate%2890 28 28%29%22/%3E%3Cpath d=%22M28 28C21 23 21 14 28 8C35 14 35 23 28 28Z%22 transform=%22rotate%28180 28 28%29%22/%3E%3Cpath d=%22M28 28C21 23 21 14 28 8C35 14 35 23 28 28Z%22 transform=%22rotate%28270 28 28%29%22/%3E%3C/g%3E%3Cg fill=%22%23b98618%22 fill-opacity=%22.09%22%3E%3Ccircle cx=%2228%22 cy=%2228%22 r=%222.2%22/%3E%3Ccircle cx=%220%22 cy=%220%22 r=%222.4%22/%3E%3Ccircle cx=%2256%22 cy=%220%22 r=%222.4%22/%3E%3Ccircle cx=%220%22 cy=%2256%22 r=%222.4%22/%3E%3Ccircle cx=%2256%22 cy=%2256%22 r=%222.4%22/%3E%3C/g%3E%3C/svg%3E");--t-diamond:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 12 12%22%3E%3Cpath d=%22M6 0L12 6 6 12 0 6Z%22 fill=%22%23dfa82a%22 stroke=%22%238f6710%22 stroke-width=%221%22/%3E%3C/svg%3E")}
+:root{
+  --navy-950:#0a1230; --navy-900:#0e1a40; --navy-800:#13235a; --navy-700:#1c3277; --navy-600:#2a458f;
+  --gold-300:#f6d884; --gold-400:#efc04a; --gold-500:#dfa82a; --gold-600:#b98618; --gold-700:#8f6710;
+  --cream:#fbf3de; --cream-2:#f4e7c4; --cream-3:#ead8a8; --paper:#fffaf0;
+  --ink:#1a1d33; --ink-2:#4a4d68; --ink-3:#7a7c92;
+  --vermilion:#c2412d; --vermilion-d:#9b2f1f; --jade:#2c7a66; --jade-d:#1e5a4a;
+  --r:10px;
+  --f-display:'Chonburi','Noto Serif Thai',serif;
+  --f-verse:'Noto Serif Thai','Sarabun',serif;
+  --f-ui:'Sarabun','Noto Sans Thai',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.8,.26,1);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.65 var(--f-ui);
+  background-image:var(--t-prajam-faint);background-size:56px 56px;min-height:100vh;
+  padding-bottom:calc(84px + var(--safe-b));overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0}
+input{font:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold-400);color:var(--navy-900);padding:8px 14px;border-radius:6px;z-index:99}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--gold-500);outline-offset:2px;border-radius:6px}
+
+/* ---------- top bar ---------- */
+.top{position:sticky;top:0;z-index:30;background:var(--navy-900);color:var(--cream);
+  border-bottom:3px solid var(--gold-500);box-shadow:0 1px 0 var(--navy-950)}
+.top-in{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:8px 16px}
+.top .mini{width:40px;height:40px;transition:transform .5s var(--ease)}
+.top .brand{display:flex;align-items:center;gap:10px;min-width:0}
+.top .brand:hover .mini{transform:rotate(-12deg) scale(1.08)}
+.top .t1{font:400 17px/1.15 var(--f-display);color:var(--gold-300);white-space:nowrap}
+.top .t2{font-size:12px;color:#c9d0ea;letter-spacing:.02em}
+.top nav{margin-left:auto;display:none;gap:4px}
+.top nav button{padding:8px 14px;border-radius:8px;color:#dfe4f7;font-weight:500;position:relative;transition:color .25s,background .25s}
+.top nav button::after{content:"";position:absolute;left:14px;right:14px;bottom:3px;height:2px;background:var(--gold-400);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.top nav button:hover{color:#fff}
+.top nav button:hover::after,.top nav button[aria-current=page]::after{transform:scaleX(1)}
+.top nav button[aria-current=page]{color:var(--gold-300)}
+
+/* ---------- bottom tab bar (mobile) ---------- */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--navy-900);border-top:3px solid var(--gold-500);
+  display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:var(--safe-b)}
+.tabbar button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0 7px;color:#b8c0e0;font-size:12.5px;font-weight:500;position:relative;transition:color .25s,transform .25s var(--ease)}
+.tabbar button svg{width:24px;height:24px;transition:transform .35s var(--ease)}
+.tabbar button:hover{color:#fff}
+.tabbar button:hover svg{transform:translateY(-2px)}
+.tabbar button[aria-current=page]{color:var(--gold-300)}
+.tabbar button[aria-current=page]::before{content:"";position:absolute;top:-3px;left:30%;right:30%;height:3px;background:var(--gold-300)}
+.tabbar button .dot{position:absolute;top:6px;left:calc(50% + 8px);width:9px;height:9px;border-radius:50%;background:var(--vermilion);border:2px solid var(--navy-900);display:none}
+.tabbar button.has-dot .dot{display:block}
+
+/* ---------- layout ---------- */
+main{max-width:880px;margin:0 auto;padding:0 16px}
+.view{display:none}
+.view.is-active{display:block;animation:viewIn .5s var(--ease) both}
+@keyframes viewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h2.sec{font:400 22px/1.3 var(--f-display);color:var(--navy-800);margin:28px 0 4px;display:flex;align-items:center;gap:10px}
+h2.sec .no{flex:none}
+p.lead{margin:0 0 14px;color:var(--ink-2)}
+
+/* ornaments */
+.krajang{height:16px;background:var(--t-krajang) repeat-x center/28px 16px}
+.krajang.flip{transform:scaleY(-1)}
+.rule{display:flex;align-items:center;gap:10px;margin:22px 0;color:var(--gold-600)}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-500),transparent)}
+.rule svg{width:20px;height:20px;flex:none}
+.no{display:inline-grid;place-items:center;width:34px;height:34px;flex:none;position:relative;font:400 16px/1 var(--f-display);color:var(--navy-900)}
+.no::before{content:"";position:absolute;inset:3px;background:var(--gold-400);transform:rotate(45deg);border:1.5px solid var(--gold-700);transition:transform .5s var(--ease),background .3s}
+.no>span{position:relative}
+
+/* ---------- hero ---------- */
+.hero{margin:0 -16px;background:var(--navy-800);background-image:var(--t-prajam);background-size:56px 56px;color:var(--cream);
+  text-align:center;padding:26px 16px 0;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 38%,rgba(10,18,48,0) 0,rgba(10,18,48,.55) 100%);pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .halo{position:relative;width:min(64vw,236px);margin:0 auto}
+.hero .halo::before,.hero .halo::after{content:"";position:absolute;inset:-12px;border-radius:50%;border:1.5px dashed rgba(240,194,74,.55);animation:spin 60s linear infinite}
+.hero .halo::after{inset:-24px;border:1px solid rgba(240,194,74,.28);animation-duration:90s;animation-direction:reverse}
+.hero .halo img{position:relative;width:100%;aspect-ratio:1;filter:drop-shadow(0 10px 18px rgba(0,0,0,.45));animation:floaty 6s ease-in-out infinite;transition:transform .6s var(--ease)}
+.hero .halo:hover img{transform:scale(1.04) rotate(-2deg)}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font:400 clamp(24px,6.4vw,34px)/1.3 var(--f-display);margin:30px 0 4px;color:var(--gold-300);text-shadow:0 2px 0 rgba(0,0,0,.25)}
+.hero p{margin:0 auto;max-width:34em;color:#d6dcf3;font-size:16px}
+.hero .steps{display:flex;justify-content:center;gap:8px;margin:18px 0 0;padding:0;list-style:none;flex-wrap:wrap}
+.hero .steps li{font-size:14px;padding:5px 13px;border:1px solid rgba(240,194,74,.5);border-radius:99px;color:var(--gold-300);background:rgba(10,18,48,.35);transition:background .3s,transform .3s var(--ease)}
+.hero .steps li:hover{background:rgba(240,194,74,.18);transform:translateY(-2px)}
+.hero .edge{margin-top:22px;height:16px;background:var(--t-krajang-cream) repeat-x bottom/28px 16px}
+
+/* ---------- cards ---------- */
+.card{background:var(--paper);border:1.5px solid var(--gold-600);border-radius:6px;padding:18px 16px;margin:16px 0;position:relative;
+  box-shadow:inset 0 0 0 4px var(--paper),inset 0 0 0 5px rgba(185,134,24,.4),0 6px 0 -3px rgba(185,134,24,.18);
+  transition:transform .4s var(--ease),box-shadow .4s}
+.card::before,.card::after{content:"";position:absolute;width:12px;height:12px;background:var(--t-diamond) no-repeat center/12px;pointer-events:none}
+.card::before{left:-7px;top:-7px}.card::after{right:-7px;bottom:-7px}
+.card.hoverable:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 4px var(--paper),inset 0 0 0 5px rgba(185,134,24,.55),0 12px 0 -6px rgba(185,134,24,.22)}
+.card h3{font:400 18px/1.3 var(--f-display);color:var(--navy-800);margin:0 0 8px}
+.note{font-size:14.5px;color:var(--ink-2)}
+
+/* ---------- buttons ---------- */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:99px;font-weight:600;
+  background:var(--navy-800);color:var(--gold-300);border:2px solid var(--gold-500);transition:transform .3s var(--ease),box-shadow .3s,background .3s,color .3s;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 30%,rgba(246,216,132,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 -1px var(--gold-700);color:#fff}
+.btn:hover::before{transform:translateX(120%)}
+.btn:active{transform:translateY(1px);box-shadow:none}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.gold{background:var(--gold-400);color:var(--navy-950);border-color:var(--gold-700)}
+.btn.gold:hover{background:var(--gold-300);color:var(--navy-950);box-shadow:0 6px 0 -1px var(--gold-700)}
+.btn.ghost{background:transparent;color:var(--navy-800);border-color:var(--navy-700)}
+.btn.ghost:hover{background:var(--navy-800);color:var(--gold-300)}
+.btn.small{min-height:38px;padding:6px 14px;font-size:15px}
+.btn[disabled]{opacity:.5;pointer-events:none}
+
+/* ---------- player ---------- */
+.player{position:sticky;top:70px;z-index:20;margin:14px 0 0;display:flex;align-items:center;gap:10px;padding:7px 10px;background:var(--navy-800);color:var(--cream);border:2px solid var(--gold-500);border-radius:99px;box-shadow:0 8px 18px -8px rgba(10,18,48,.55)}
+.player .play{flex:none;width:46px;height:46px;border-radius:50%;background:var(--gold-400);color:var(--navy-950);display:grid;place-items:center;border:2px solid var(--gold-700);transition:transform .3s var(--ease),background .3s;position:relative}
+.player .play:hover{transform:scale(1.08);background:var(--gold-300)}
+.player .play svg{width:24px;height:24px}
+.player .play .i-pause{display:none}.player.playing .play .i-play{display:none}.player.playing .play .i-pause{display:block}
+.player.playing .play::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--gold-400);animation:ping 1.6s ease-out infinite}
+@keyframes ping{from{transform:scale(.85);opacity:.9}to{transform:scale(1.25);opacity:0}}
+.player .mid{flex:1;min-width:0}
+.player .lbl{font-size:13px;line-height:1.3;color:#c9d0ea;display:flex;justify-content:space-between;gap:8px}
+.player .lbl span{white-space:nowrap;flex:none}
+.player .lbl b{font-weight:600;color:var(--gold-300);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.track{position:relative;height:22px;cursor:pointer;touch-action:none}
+.track .bar{position:absolute;left:0;right:0;top:9px;height:4px;border-radius:4px;background:rgba(255,255,255,.2)}
+.track .fill{position:absolute;left:0;top:9px;height:4px;border-radius:4px;background:var(--gold-400);width:0}
+.track .tick{position:absolute;top:5px;width:2px;height:12px;background:rgba(240,194,74,.6);transform:translateX(-1px)}
+.track .knob{position:absolute;top:4px;width:14px;height:14px;margin-left:-7px;background:var(--gold-300);border:2px solid var(--navy-900);transform:rotate(45deg);left:0;transition:transform .2s}
+.track:hover .knob{transform:rotate(45deg) scale(1.3)}
+.speed{flex:none;display:flex;gap:3px;flex-direction:column}
+@media(min-width:420px){.speed{flex-direction:row}}
+.speed button{min-width:40px;height:26px;padding:0 6px;border-radius:99px;font-size:12.5px;line-height:1;font-weight:600;color:var(--gold-300);border:1.5px solid rgba(240,194,74,.55);transition:background .25s,color .25s}
+.speed button:hover{background:rgba(240,194,74,.2)}
+.speed button[aria-pressed=true]{background:var(--gold-400);color:var(--navy-950);border-color:var(--gold-400)}
+
+/* ---------- verse ---------- */
+.bot{display:flex;align-items:center;gap:12px;margin:26px 0 6px;font:400 19px/1.2 var(--f-display);color:var(--navy-800)}
+.bot::after{content:"";flex:1;height:14px;background:var(--t-krajang-gold) repeat-x center/24px 14px;opacity:.9}
+.wak{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;padding:8px 4px 8px 0;margin:0 -4px;border-radius:10px;cursor:pointer;position:relative;transition:background .3s,transform .4s var(--ease)}
+.wak:hover{background:var(--cream-2);transform:translateX(5px)}
+.wak:hover .no::before{transform:rotate(225deg);background:var(--gold-300)}
+.wak .txt{font:600 clamp(18px,5.1vw,27px)/1.55 var(--f-verse);letter-spacing:0;min-width:0}
+.wak .role{display:block;font:500 12.5px/1.2 var(--f-ui);color:var(--ink-3);letter-spacing:.03em;margin-top:-2px}
+.wak .go{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--gold-700);border:1.5px solid var(--gold-500);opacity:.55;transition:opacity .3s,background .3s,transform .3s var(--ease),color .3s}
+.wak:hover .go{opacity:1;background:var(--gold-400);color:var(--navy-950);transform:scale(1.1)}
+.wak .go svg{width:18px;height:18px}
+.wak.now{background:linear-gradient(90deg,rgba(239,192,74,.28),rgba(239,192,74,0))}
+.wak.now .no::before{background:var(--vermilion);border-color:var(--vermilion-d)}
+.wak.now .no{color:#fff}
+.h{white-space:nowrap;background-image:linear-gradient(90deg,var(--gold-700) var(--p,0%),var(--ink) var(--p,0%));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.pause{display:inline-block;width:8px;height:8px;margin:0 8px;background:var(--gold-500);transform:rotate(45deg) translateY(-3px);vertical-align:middle;opacity:.9}
+.wak.static{cursor:default}.wak.static:hover{background:none;transform:none}
+.wak.static .go{display:none}.wak.static{grid-template-columns:auto 1fr}
+.loop{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--ink-2);margin:6px 0 0}
+.loop input{width:20px;height:20px;accent-color:var(--gold-600)}
+
+/* ---------- forms ---------- */
+.fld{display:grid;gap:6px;margin:10px 0}
+.fld label{font-weight:600;font-size:15px;color:var(--navy-800)}
+.fld input{width:100%;min-height:46px;padding:8px 14px;border:1.5px solid var(--gold-600);border-radius:8px;background:#fff;color:var(--ink);transition:box-shadow .25s,border-color .25s}
+.fld input:hover{border-color:var(--navy-700)}
+.fld input:focus{outline:none;border-color:var(--navy-700);box-shadow:0 0 0 3px rgba(239,192,74,.55)}
+.two{display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:520px){.two{grid-template-columns:1.6fr 1fr}}
+
+/* ---------- mic meter & recorder ---------- */
+.meter{display:flex;gap:4px;align-items:center;height:34px;margin:12px 0 6px}
+.meter i{flex:1;height:100%;max-width:14px;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);background:var(--cream-3);transition:background .08s,transform .08s}
+.meter i.on{background:var(--gold-500);transform:scale(1.08)}
+.meter i.hot{background:var(--vermilion)}
+.status{display:flex;align-items:flex-start;gap:8px;font-size:15.5px;margin:8px 0 0;min-height:26px}
+.status .pill{flex:none;width:12px;height:12px;margin-top:7px;border-radius:50%;background:var(--ink-3)}
+.status.ok .pill{background:var(--jade)}.status.warn .pill{background:var(--gold-500)}.status.bad .pill{background:var(--vermilion)}
+.rec-wrap{display:grid;justify-items:center;gap:6px;margin:20px 0 6px}
+.rec{width:104px;height:104px;border-radius:50%;background:var(--navy-800);border:4px solid var(--gold-500);color:var(--gold-300);display:grid;place-items:center;position:relative;
+  box-shadow:0 0 0 6px var(--paper),0 0 0 8px var(--gold-600);transition:transform .35s var(--ease),background .3s,color .3s}
+.rec:hover{transform:scale(1.07);background:var(--navy-700)}
+.rec svg{width:42px;height:42px}
+.rec .i-stop{display:none}
+.rec.on{background:var(--vermilion);border-color:#f3a99c;color:#fff}
+.rec.on .i-mic{display:none}.rec.on .i-stop{display:block}
+.rec.on::before,.rec.on::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:3px solid var(--vermilion);animation:ping 1.8s ease-out infinite}
+.rec.on::after{animation-delay:.9s}
+.rec[disabled]{opacity:.45;pointer-events:none}
+.timer{font:400 28px/1 var(--f-display);color:var(--navy-800);min-height:30px;font-variant-numeric:tabular-nums}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 12px;border-radius:99px;font-size:14px;font-weight:500;background:var(--cream-2);border:1px solid var(--cream-3);color:var(--ink-2)}
+.chip.ok{background:#dcefe8;border-color:#a9d3c5;color:var(--jade-d)}
+.chip.bad{background:#f7dcd5;border-color:#e6a99b;color:var(--vermilion-d)}
+.myrec{margin-top:14px;display:none}.myrec.show{display:block}
+.myrec audio{width:100%;margin-top:6px}
+
+/* ---------- analyzing overlay ---------- */
+.overlay{position:fixed;inset:0;z-index:80;background:rgba(10,18,48,.9);display:none;place-items:center;text-align:center;color:var(--cream);padding:24px}
+.overlay.show{display:grid;animation:viewIn .3s both}
+.overlay .rosette{width:132px;height:132px;margin:0 auto 18px;animation:spin 6s linear infinite;color:var(--gold-400)}
+.overlay .rosette .p{transform-origin:60px 60px;animation:pulse 1.6s ease-in-out infinite}
+.overlay .rosette .p:nth-child(2){animation-delay:.2s}.overlay .rosette .p:nth-child(3){animation-delay:.4s}.overlay .rosette .p:nth-child(4){animation-delay:.6s}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.overlay h3{font:400 22px/1.3 var(--f-display);color:var(--gold-300);margin:0 0 6px}
+.overlay p{margin:0;color:#d6dcf3}
+
+/* ---------- result ---------- */
+.score-hero{display:grid;gap:18px;justify-items:center;text-align:center}
+.ring{position:relative;width:176px;height:176px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .bg{stroke:var(--cream-3)}
+.ring .fg{stroke:var(--gold-500);stroke-linecap:round;transition:stroke-dashoffset 1.6s var(--ease)}
+.ring .num{position:absolute;inset:0;display:grid;place-content:center;font:400 54px/1 var(--f-display);color:var(--navy-800)}
+.ring .num small{display:block;font:500 13px/1.4 var(--f-ui);color:var(--ink-3);margin-top:2px}
+.grade{font:400 24px/1.3 var(--f-display);color:var(--navy-800);margin:0}
+.dims{display:grid;gap:12px;width:100%;margin-top:6px;text-align:left}
+.dim .row{display:flex;justify-content:space-between;font-weight:600;font-size:15.5px}
+.dim .row span:last-child{font-family:var(--f-display);font-weight:400;color:var(--navy-800)}
+.dim .bar{height:10px;border-radius:99px;background:var(--cream-3);overflow:hidden;margin-top:4px}
+.dim .bar i{display:block;height:100%;width:0;border-radius:99px;background:var(--gold-500);transition:width 1.2s var(--ease)}
+.dim .hint{font-size:13.5px;color:var(--ink-3);margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.sum p{margin:0 0 10px}
+.sum p:last-child{margin:0}
+.chartbox{background:#fff;border:1px solid var(--cream-3);border-radius:8px;padding:6px 6px 2px;overflow:hidden}
+.chartbox svg{width:100%;height:auto;display:block}
+.legend{display:flex;gap:16px;font-size:13.5px;color:var(--ink-2);margin:6px 2px 0;flex-wrap:wrap}
+.legend i{display:inline-block;width:22px;height:4px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.lcard{padding:16px 14px}
+.lcard .hd{display:flex;align-items:center;gap:10px}
+.lcard .hd .t{flex:1;font:600 19px/1.4 var(--f-verse)}
+.lcard .hd .t small{display:block;font:500 12.5px/1.2 var(--f-ui);color:var(--ink-3)}
+.badge{min-width:54px;text-align:center;padding:2px 10px;border-radius:99px;font:400 20px/1.5 var(--f-display);color:var(--navy-950);background:var(--gold-300);border:1.5px solid var(--gold-700)}
+.badge.hi{background:#bfe3d4;border-color:var(--jade)}.badge.lo{background:#f5c9bf;border-color:var(--vermilion)}
+.mini3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 4px}
+.mini3 div{font-size:13px;color:var(--ink-2)}
+.mini3 b{display:block;font:400 17px/1.2 var(--f-display);color:var(--navy-800)}
+.mini3 .bar{height:5px;border-radius:5px;background:var(--cream-3);margin-top:3px;overflow:hidden}.mini3 .bar i{display:block;height:100%;background:var(--gold-500)}
+.lcard ul{margin:8px 0 10px;padding-left:20px;font-size:15.5px}
+.lcard li{margin:2px 0}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.empty{text-align:center;padding:30px 10px}
+.empty img{width:120px;margin:0 auto 10px;opacity:.9}
+
+/* history */
+.hist{list-style:none;margin:0;padding:0}
+.hist li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:12px 6px;border-bottom:1px dashed var(--cream-3);transition:background .3s,transform .3s var(--ease)}
+.hist li:hover{background:var(--cream-2);transform:translateX(4px)}
+.hist .sc{font:400 26px/1 var(--f-display);color:var(--navy-800);min-width:48px;text-align:center}
+.hist .meta{font-size:14px;color:var(--ink-2)}
+.hist .meta b{display:block;font-size:16px;color:var(--ink)}
+.hist .sync{font-size:12.5px;color:var(--ink-3)}
+
+/* teacher */
+.tbl-wrap{overflow:auto;border:1px solid var(--cream-3);border-radius:8px;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--cream-2);white-space:nowrap}
+th{background:var(--navy-800);color:var(--gold-300);font-weight:600;position:sticky;top:0}
+tr:hover td{background:var(--cream)}
+
+/* toast */
+#toast{position:fixed;left:50%;bottom:calc(96px + var(--safe-b));transform:translate(-50%,20px);background:var(--navy-900);color:var(--cream);border:2px solid var(--gold-500);padding:10px 18px;border-radius:99px;z-index:90;opacity:0;pointer-events:none;transition:opacity .3s,transform .4s var(--ease);max-width:calc(100vw - 32px);text-align:center;font-size:15px}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+footer{max-width:880px;margin:30px auto 0;padding:0 16px 10px;text-align:center;color:var(--ink-3);font-size:13.5px}
+footer a{color:var(--navy-700)}
+
+@media (min-width:900px){
+  body{font-size:18px;padding-bottom:30px}
+  .tabbar{display:none}
+  .top nav{display:flex}
+  .top .t1{font-size:19px}
+  .hero{margin:0;border-radius:0 0 24px 24px}
+  .player{top:68px}
+  #toast{bottom:30px}
+  .score-hero{grid-template-columns:200px 1fr;text-align:left;justify-items:stretch;align-items:center}
+  .score-hero .ring{justify-self:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">ข้ามไปยังเนื้อหา</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21M8.5 21h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-ear" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0116 0v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="3" y="14" width="4.5" height="6.5" rx="2" fill="currentColor"/><rect x="16.5" y="14" width="4.5" height="6.5" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 18l5-7 4 4 5-9 4 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-hist" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5.2l3.4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M12 2l10 10-10 10L2 12z" fill="currentColor"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#listen" aria-label="หน้าแรก ระบบสอนอ่านกาพย์ยานี ๑๑" style="color:inherit;text-decoration:none">
+      <img class="mini" src="assets/logo-256.png" width="40" height="40" alt="">
+      <span><span class="t1" style="display:block">กาพย์ยานี ๑๑</span><span class="t2">ระบบสอนอ่านทำนองเสนาะ · ครูนนท์</span></span>
+    </a>
+    <nav aria-label="เมนูหลัก">
+      <button data-go="listen">ฟังต้นแบบ</button>
+      <button data-go="read">อ่านตาม</button>
+      <button data-go="result">ผลล่าสุด</button>
+      <button data-go="history">ประวัติ</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== ฟังต้นแบบ ===================== -->
+<section id="view-listen" class="view is-active" aria-labelledby="h-listen">
+  <div class="hero">
+    <div class="halo"><img src="assets/logo.png" width="480" height="480" alt="โลโก้ระบบสอนอ่านกาพย์ยานี ๑๑ ครูในชุดสูทถือสมุดไทยกำลังอ่านทำนองเสนาะ"></div>
+    <h1 id="h-listen">อ่านทำนองเสนาะให้ไพเราะ</h1>
+    <p>ฟังเสียงต้นแบบ อ่านตาม แล้วดูว่าเสียงสูงต่ำและจังหวะของเราใกล้เคียงต้นแบบแค่ไหน</p>
+    <ul class="steps"><li>๑ ฟังต้นแบบ</li><li>๒ อ่านตาม</li><li>๓ ดูผลสะท้อน</li></ul>
+    <div class="edge" aria-hidden="true"></div>
+  </div>
+
+  <div class="player" id="player" role="group" aria-label="เครื่องเล่นเสียงต้นแบบ">
+    <button class="play" id="btn-play" aria-label="เล่นหรือหยุดเสียงต้นแบบ"><svg class="i-play"><use href="#i-play"/></svg><svg class="i-pause"><use href="#i-pause"/></svg></button>
+    <div class="mid">
+      <div class="lbl"><b id="pl-title">เสียงต้นแบบทั้งบท</b><span id="pl-time">๐:๐๐</span></div>
+      <div class="track" id="track" role="slider" aria-label="ตำแหน่งเสียง" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+        <div class="bar"></div><div class="fill" id="tr-fill"></div><div id="tr-ticks"></div><div class="knob" id="tr-knob"></div>
+      </div>
+    </div>
+    <div class="speed" role="group" aria-label="ความเร็ว">
+      <button data-speed="0.75" aria-pressed="false">๐.๗๕×</button>
+      <button data-speed="1" aria-pressed="true">๑×</button>
+    </div>
+  </div>
+
+  <h2 class="sec"><span class="no"><span>๑</span></span>ตัวบทและเสียงต้นแบบ</h2>
+  <p class="lead">แตะวรรคใดก็ได้เพื่อฟังเฉพาะวรรคนั้น ตัวอักษรจะเรืองทองตามจังหวะของต้นแบบ เครื่องหมาย <span class="pause" style="margin:0 4px"></span> คือจุดเว้นจังหวะกลางวรรค</p>
+  <div class="card" id="verse-listen"></div>
+  <label class="loop"><input type="checkbox" id="chk-loop"> วนซ้ำเฉพาะวรรคที่เลือก</label>
+
+  <div class="rule" aria-hidden="true"><svg><use href="#i-diamond"/></svg></div>
+
+  <div class="card">
+    <h3>กาพย์ยานี ๑๑ อ่านอย่างไร</h3>
+    <p class="note" style="margin:0">หนึ่งวรรคมี ๕ หรือ ๖ คำ แบ่งจังหวะเป็น ๒ / ๓ หรือ ๓ / ๓ คำ เว้นเสียงเล็กน้อยตรงเครื่องหมาย <span class="pause" style="margin:0 3px"></span> แล้วทอดเสียงท้ายวรรคให้ต่อเนื่องก่อนเข้าวรรคถัดไป วรรคทั้งสี่ในแต่ละบทเรียกว่า สดับ · รับ · รอง · ส่ง</p>
+  </div>
+
+  <div class="card" id="install-card" hidden>
+    <h3>ติดตั้งลงหน้าจอโฮม</h3>
+    <p class="note" style="margin:0 0 10px">เปิดใช้งานได้เร็วเหมือนแอป พร้อมไอคอนโลโก้บนหน้าจอ</p>
+    <button class="btn gold" id="install-btn" hidden><svg><use href="#i-download"/></svg>ติดตั้งแอป</button>
+    <p class="note" id="ios-tip" style="margin:0" hidden>บน iPhone / iPad: แตะปุ่ม <b>แชร์</b> ในเบราว์เซอร์ Safari แล้วเลือก <b>เพิ่มไปยังหน้าจอโฮม</b></p>
+  </div>
+</section>
+
+<!-- ===================== อ่านตาม ===================== -->
+<section id="view-read" class="view" aria-labelledby="h-read">
+  <h2 class="sec" id="h-read" style="margin-top:22px"><span class="no"><span>๒</span></span>อ่านตามต้นแบบ</h2>
+  <p class="lead">เตรียมตัว ทดสอบไมค์ แล้วอ่านทั้ง ๘ วรรคให้จบในครั้งเดียว ระบบจะวิเคราะห์ในเครื่องของเรา เสียงไม่ถูกอัปโหลดไปที่ใด</p>
+
+  <div class="card">
+    <h3>ผู้อ่าน</h3>
+    <div class="two">
+      <div class="fld"><label for="in-name">ชื่อ</label><input id="in-name" autocomplete="nickname" maxlength="40" placeholder="เช่น น้องฟ้า"></div>
+      <div class="fld"><label for="in-room">ห้อง</label><input id="in-room" maxlength="16" placeholder="เช่น ม.๓/๑"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ทดสอบไมโครโฟน</h3>
+    <p class="note" style="margin:0">อยู่ในที่เงียบ ถือมือถือห่างปากประมาณ ๑ คืบ</p>
+    <div class="meter" id="meter" aria-hidden="true"></div>
+    <div class="status" id="mic-status" role="status"><span class="pill"></span><span id="mic-msg">ยังไม่ได้ทดสอบ</span></div>
+    <div style="margin-top:12px"><button class="btn ghost small" id="btn-mictest"><svg><use href="#i-mic"/></svg>ทดสอบไมค์</button></div>
+  </div>
+
+  <div class="card">
+    <h3>ตัวบท</h3>
+    <div id="verse-read"></div>
+    <div class="rec-wrap">
+      <button class="rec" id="btn-rec" aria-label="เริ่มหรือหยุดอัดเสียง"><svg class="i-mic"><use href="#i-mic"/></svg><svg class="i-stop"><use href="#i-stop"/></svg></button>
+      <div class="timer" id="rec-timer" aria-live="off">๐:๐๐</div>
+      <div class="note" id="rec-hint">แตะปุ่มเพื่อเริ่มอ่าน แตะอีกครั้งเมื่อจบวรรคสุดท้าย</div>
+      <span class="chip" id="ref-chip">กำลังเตรียมเสียงต้นแบบ…</span>
+    </div>
+    <div class="myrec" id="myrec"><strong>เสียงที่เพิ่งอัด</strong><audio id="my-audio" controls preload="metadata"></audio></div>
+  </div>
+</section>
+
+<!-- ===================== ผลล่าสุด ===================== -->
+<section id="view-result" class="view" aria-labelledby="h-result">
+  <h2 class="sec" id="h-result" style="margin-top:22px"><span class="no"><span>๓</span></span>ผลการอ่านล่าสุด</h2>
+  <div id="result-empty" class="card empty">
+    <img src="assets/logo-256.png" width="120" height="120" alt="">
+    <p style="margin:0 0 12px">ยังไม่มีผลการอ่าน ลองฟังต้นแบบแล้วอ่านตามสักรอบ</p>
+    <button class="btn gold" data-go="read"><svg><use href="#i-mic"/></svg>ไปอ่านตาม</button>
+  </div>
+  <div id="result-body" hidden></div>
+</section>
+
+<!-- ===================== ประวัติ ===================== -->
+<section id="view-history" class="view" aria-labelledby="h-history">
+  <h2 class="sec" id="h-history" style="margin-top:22px"><span class="no"><span>๔</span></span>ความก้าวหน้าของฉัน</h2>
+  <div class="card" id="hist-card">
+    <div class="chartbox" id="hist-chart" hidden></div>
+    <ul class="hist" id="hist-list"></ul>
+    <p class="note" id="hist-empty" style="margin:0">ยังไม่มีประวัติ เมื่ออ่านแล้วผลจะถูกบันทึกที่นี่โดยอัตโนมัติ</p>
+    <p class="note" id="hist-sync" style="margin:10px 0 0"></p>
+  </div>
+</section>
+
+<!-- ===================== ครู ===================== -->
+<section id="view-teacher" class="view" aria-labelledby="h-teacher">
+  <h2 class="sec" id="h-teacher" style="margin-top:22px">กระดานครู</h2>
+  <div class="card">
+    <p class="note" style="margin:0 0 10px" id="t-msg">เข้าสู่ระบบด้วยบัญชี Google ของครูเพื่อดูผลการอ่านของนักเรียนทุกคน</p>
+    <div class="acts">
+      <button class="btn small" id="t-login">เข้าสู่ระบบด้วย Google</button>
+      <button class="btn small ghost" id="t-csv" hidden>ดาวน์โหลด CSV</button>
+    </div>
+    <div class="fld" id="t-filter" hidden><label for="t-room">กรองตามห้อง</label><input id="t-room" placeholder="เช่น ม.๓/๑ (เว้นว่างเพื่อดูทั้งหมด)"></div>
+    <div class="tbl-wrap" id="t-tbl" hidden style="margin-top:10px"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="krajang" style="margin-bottom:8px" aria-hidden="true"></div>
+  <p style="margin:0">คะแนนคือ “ความใกล้เคียงกับเสียงต้นแบบ” ไม่ใช่ความถูกผิดสมบูรณ์ ทำนองเสนาะที่ไพเราะมีได้หลายแบบ</p>
+  <p style="margin:6px 0 0">พัฒนาโดย ครูนนทพัทธ์ หิรัญเรือง · โรงเรียนกระดุมทองวิทยา · <a href="#teacher" id="a-teacher">สำหรับครู</a></p>
+</footer>
+
+<nav class="tabbar" aria-label="เมนูหลัก">
+  <button data-go="listen"><svg><use href="#i-ear"/></svg>ฟังต้นแบบ</button>
+  <button data-go="read"><svg><use href="#i-mic"/></svg>อ่านตาม</button>
+  <button data-go="result"><svg><use href="#i-chart"/></svg>ผลล่าสุด<i class="dot"></i></button>
+  <button data-go="history"><svg><use href="#i-hist"/></svg>ประวัติ</button>
+</nav>
+
+<div class="overlay" id="analyzing" role="alertdialog" aria-live="polite" aria-label="กำลังวิเคราะห์เสียง">
+  <div>
+    <svg class="rosette" viewBox="0 0 120 120" aria-hidden="true"><g fill="currentColor">
+      <path class="p" d="M60 58C47 46 47 24 60 8C73 24 73 46 60 58Z"/>
+      <path class="p" transform="rotate(90 60 60)" d="M60 58C47 46 47 24 60 8C73 24 73 46 60 58Z"/>
+      <path class="p" transform="rotate(180 60 60)" d="M60 58C47 46 47 24 60 8C73 24 73 46 60 58Z"/>
+      <path class="p" transform="rotate(270 60 60)" d="M60 58C47 46 47 24 60 8C73 24 73 46 60 58Z"/></g>
+      <circle cx="60" cy="60" r="6" fill="#f6d884"/></svg>
+    <h3>กำลังฟังเสียงของเรา</h3>
+    <p id="an-step">เตรียมเสียงที่อัด…</p>
+  </div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script type="text/plain" id="analyzer-src">
+const Analyzer = (function () {
+  'use strict';
+  var SR = 8000, HOP = 80, W = 256, TAUMIN = 13, TAUMAX = 115, PAD = (W + TAUMAX) >> 1;
+  var FS = HOP / SR; // 0.01 s per frame
+  var REF_T0 = 3.30, REF_T1 = 44.50;
+  var LINES = [
+    { a: [3.38, 5.25], b: [5.54, 7.90] },
+    { a: [8.42, 10.74], b: [11.15, 13.94] },
+    { a: [14.47, 16.30], b: [16.45, 18.64] },
+    { a: [19.01, 21.16], b: [21.44, 24.04] },
+    { a: [24.75, 26.54], b: [26.82, 28.97] },
+    { a: [29.38, 31.28], b: [31.68, 34.40] },
+    { a: [34.86, 36.30], b: [36.62, 39.09] },
+    { a: [39.38, 41.49], b: [41.79, 44.42] }
+  ];
+  var ref = null;
+
+  function clamp(v, a, b) { return v < a ? a : (v > b ? b : v); }
+  function gauss(err, tol) { return Math.exp(-(err / tol) * (err / tol)); }
+
+  function toMono8k(chs, sr) {
+    var len = chs[0].length, mono = new Float32Array(len), c, i;
+    for (c = 0; c < chs.length; c++) { var ch = chs[c]; for (i = 0; i < len; i++) mono[i] += ch[i] / chs.length; }
+    var out;
+    if (sr === SR) { out = mono; } else {
+      var ratio = sr / SR, n = Math.floor(len / ratio);
+      var cum = new Float64Array(len + 1);
+      for (i = 0; i < len; i++) cum[i + 1] = cum[i] + mono[i];
+      var at = function (p) { var k = Math.floor(p); if (k >= len) return cum[len]; var f = p - k; return cum[k] + (cum[k + 1] - cum[k]) * f; };
+      out = new Float32Array(n);
+      for (i = 0; i < n; i++) out[i] = (at((i + 1) * ratio) - at(i * ratio)) / ratio;
+    }
+    // high-pass ~60 Hz to drop rumble / DC
+    var y = new Float32Array(out.length), px = 0, py = 0;
+    for (i = 0; i < out.length; i++) { var xv = out[i]; py = xv - px + 0.95 * py; px = xv; y[i] = py; }
+    return y;
+  }
+
+  function median(arr) { var a = arr.slice().sort(function (x, y) { return x - y; }); return a.length ? a[a.length >> 1] : 0; }
+
+  function analyzeSignal(x) {
+    var n = Math.floor(x.length / HOP), i, j, tau;
+    var xp = new Float32Array(PAD + x.length + W + TAUMAX + 2); xp.set(x, PAD);
+    var db = new Float32Array(n), f0 = new Float32Array(n), ap = new Float32Array(n);
+    for (i = 0; i < n; i++) {
+      var c = i * HOP, s = 0, k = 0, lo = Math.max(0, c - 80), hi = Math.min(x.length, c + 80);
+      for (j = lo; j < hi; j++) { s += x[j] * x[j]; k++; }
+      db[i] = 10 * Math.log10(s / Math.max(k, 1) + 1e-10); ap[i] = 1;
+    }
+    var d = new Float32Array(TAUMAX + 1), cm = new Float32Array(TAUMAX + 1), cand = new Array(n);
+    for (i = 0; i < n; i++) {
+      if (db[i] < -66) continue;
+      var o = i * HOP, run = 0; cm[0] = 1;
+      for (tau = 1; tau <= TAUMAX; tau++) {
+        var ss = 0;
+        for (j = 0; j < W; j++) { var dl = xp[o + j] - xp[o + j + tau]; ss += dl * dl; }
+        d[tau] = ss; run += ss; cm[tau] = run > 0 ? ss * tau / run : 1;
+      }
+      var cands = [];
+      for (tau = TAUMIN + 1; tau < TAUMAX - 1; tau++) {
+        if (cm[tau] < 0.5 && cm[tau] <= cm[tau - 1] && cm[tau] < cm[tau + 1]) cands.push(tau);
+      }
+      if (!cands.length) { var m = 1e9, bt = TAUMIN; for (tau = TAUMIN; tau < TAUMAX; tau++) if (cm[tau] < m) { m = cm[tau]; bt = tau; } cands.push(bt); }
+      cands.sort(function (p, q) { return cm[p] - cm[q]; });
+      if (cands.length > 4) cands.length = 4;
+      var cl = [];
+      for (var ci = 0; ci < cands.length; ci++) {
+        var bt2 = cands[ci];
+        var a1 = cm[bt2 - 1] === undefined ? cm[bt2] : cm[bt2 - 1], b1 = cm[bt2], c1 = cm[bt2 + 1] === undefined ? cm[bt2] : cm[bt2 + 1], den = a1 - 2 * b1 + c1;
+        var sh = den !== 0 ? 0.5 * (a1 - c1) / den : 0;
+        cl.push({ f: SR / (bt2 + (Math.abs(sh) < 1 ? sh : 0)), c: cm[bt2] });
+      }
+      cand[i] = cl; ap[i] = cm[cands[0]]; f0[i] = cl[0].f;
+    }
+    var sorted = Float32Array.from(db).sort();
+    var p95 = sorted[Math.floor(n * 0.95)] || -40, p10 = sorted[Math.floor(n * 0.1)] || -80;
+    var voiced = new Uint8Array(n), vf = [];
+    for (i = 0; i < n; i++) {
+      if (cand[i] && ap[i] < 0.25 && db[i] > p95 - 34 && f0[i] >= 65 && f0[i] <= 640) voiced[i] = 1;
+    }
+    // Viterbi over each voiced run: choose candidate path with smooth pitch (kills octave jumps)
+    var LAMBDA = 0.05;
+    i = 0;
+    while (i < n) {
+      if (!voiced[i]) { i++; continue; }
+      j = i; while (j < n && voiced[j]) j++;
+      var len = j - i, cost = [], bp = [];
+      for (k = 0; k < len; k++) {
+        var cl2 = cand[i + k], cc = [], bb = [];
+        for (var u = 0; u < cl2.length; u++) {
+          var o1 = cl2[u].c, bestc = o1, bi = -1;
+          if (k > 0) {
+            bestc = Infinity;
+            var pl = cand[i + k - 1];
+            for (var w2 = 0; w2 < pl.length; w2++) {
+              var tr = cost[k - 1][w2] + LAMBDA * Math.abs(12 * Math.log2(cl2[u].f / pl[w2].f));
+              if (tr < bestc) { bestc = tr; bi = w2; }
+            }
+            bestc += o1;
+          }
+          cc.push(bestc); bb.push(bi);
+        }
+        cost.push(cc); bp.push(bb);
+      }
+      var bu = 0; for (var u2 = 1; u2 < cost[len - 1].length; u2++) if (cost[len - 1][u2] < cost[len - 1][bu]) bu = u2;
+      for (k = len - 1; k >= 0; k--) { f0[i + k] = cand[i + k][bu].f; bu = bp[k][bu]; }
+      i = j;
+    }
+    for (i = 0; i < n; i++) if (voiced[i] && (f0[i] < 65 || f0[i] > 640)) voiced[i] = 0;
+    for (i = 0; i < n; i++) if (voiced[i]) vf.push(f0[i]);
+    var medHz = median(vf) || 150;
+    var st = new Float32Array(n);
+    for (i = 0; i < n; i++) st[i] = voiced[i] ? 12 * Math.log2(f0[i] / medHz) : 0;
+    // drop blips (<4 frames)
+    i = 0;
+    while (i < n) {
+      if (voiced[i]) { j = i; while (j < n && voiced[j]) j++; if (j - i < 4) for (k = i; k < j; k++) voiced[k] = 0; i = j; } else i++;
+    }
+    // fill short gaps (<=2 frames)
+    i = 0;
+    while (i < n) {
+      if (!voiced[i]) {
+        j = i; while (j < n && !voiced[j]) j++;
+        if (i > 0 && j < n && j - i <= 2) { for (k = i; k < j; k++) { voiced[k] = 1; st[k] = st[i - 1] + (st[j] - st[i - 1]) * (k - i + 1) / (j - i + 1); } }
+        i = j;
+      } else i++;
+    }
+    // median filter (5) on voiced st
+    var sm = new Float32Array(st);
+    for (i = 2; i < n - 2; i++) {
+      if (!voiced[i]) continue;
+      var buf = [];
+      for (k = i - 2; k <= i + 2; k++) if (voiced[k]) buf.push(st[k]);
+      if (buf.length >= 3) sm[i] = median(buf);
+    }
+    return { n: n, db: db, voiced: voiced, st: sm, medHz: medHz, p95: p95, p10: p10 };
+  }
+
+  function activeRange(db, thr) {
+    var n = db.length, a = -1, b = -1, run = 0, i;
+    for (i = 0; i < n; i++) { if (db[i] > thr) { run++; if (run >= 8 && a < 0) a = i - 7; } else run = 0; }
+    run = 0;
+    for (i = n - 1; i >= 0; i--) { if (db[i] > thr) { run++; if (run >= 8 && b < 0) { b = i + 7; break; } } else run = 0; }
+    return [a, b];
+  }
+
+  function feats(an, a0, a1) {
+    var m = Math.floor((a1 - a0 + 1) / 2), e = new Float32Array(m), v = new Uint8Array(m), s = new Float32Array(m);
+    var base = an.p95 - 40;
+    for (var k = 0; k < m; k++) {
+      var i = a0 + 2 * k, i2 = Math.min(an.n - 1, i + 1);
+      e[k] = clamp(((an.db[i] + an.db[i2]) / 2 - base) / 40, 0, 1);
+      var c = 0, sum = 0;
+      if (an.voiced[i]) { c++; sum += an.st[i]; }
+      if (an.voiced[i2]) { c++; sum += an.st[i2]; }
+      if (c) { v[k] = 1; s[k] = sum / c; }
+    }
+    return { n: m, e: e, v: v, s: s, a0: a0 };
+  }
+
+  function dtw(A, B) {
+    var N = A.n, M = B.n, PEN = 0.12;
+    var half = Math.max(150, Math.floor(0.35 * Math.max(N, M)));
+    var dir = new Uint8Array(N * M);
+    var prev = new Float32Array(M), cur = new Float32Array(M);
+    var i, j;
+    for (i = 0; i < N; i++) {
+      var ctr = i * M / N, jlo = Math.max(0, Math.floor(ctr - half)), jhi = Math.min(M - 1, Math.ceil(ctr + half));
+      cur.fill(Infinity);
+      for (j = jlo; j <= jhi; j++) {
+        var cst = Math.abs(A.e[i] - B.e[j]);
+        if (A.v[i] !== B.v[j]) cst += 0.45;
+        else if (A.v[i]) cst += Math.min(Math.abs(A.s[i] - B.s[j]), 6) / 6 * 0.5;
+        var best, dr;
+        if (i === 0 && j === 0) { best = 0; dr = 0; } else {
+          best = Infinity; dr = 0;
+          if (i > 0 && j > 0 && prev[j - 1] < best) { best = prev[j - 1]; dr = 0; }
+          if (i > 0 && prev[j] + PEN < best) { best = prev[j] + PEN; dr = 1; }
+          if (j > 0 && cur[j - 1] + PEN < best) { best = cur[j - 1] + PEN; dr = 2; }
+        }
+        cur[j] = best + cst; dir[i * M + j] = dr;
+      }
+      var t = prev; prev = cur; cur = t;
+    }
+    var jMin = new Int32Array(N).fill(1 << 30), jMax = new Int32Array(N).fill(-1);
+    i = N - 1; j = M - 1;
+    for (;;) {
+      if (j < jMin[i]) jMin[i] = j; if (j > jMax[i]) jMax[i] = j;
+      if (i === 0 && j === 0) break;
+      var dd = dir[i * M + j];
+      if (dd === 0) { i--; j--; } else if (dd === 1) { i--; } else { j--; }
+      if (i < 0 || j < 0) break;
+    }
+    var mid = new Float32Array(N);
+    for (i = 0; i < N; i++) {
+      if (jMax[i] < 0) { jMin[i] = i > 0 ? jMin[i - 1] : 0; jMax[i] = jMin[i]; }
+      mid[i] = (jMin[i] + jMax[i]) / 2;
+    }
+    return { jMin: jMin, jMax: jMax, mid: mid };
+  }
+
+  function pearson(a, b) {
+    var n = a.length; if (n < 8) return 0;
+    var ma = 0, mb = 0, i; for (i = 0; i < n; i++) { ma += a[i]; mb += b[i]; } ma /= n; mb /= n;
+    var sab = 0, saa = 0, sbb = 0;
+    for (i = 0; i < n; i++) { var x = a[i] - ma, y = b[i] - mb; sab += x * y; saa += x * x; sbb += y * y; }
+    return saa > 1e-6 && sbb > 1e-6 ? sab / Math.sqrt(saa * sbb) : 0;
+  }
+
+  // last voiced run inside [f0,f1] (10 ms frames). returns {len, slope, ok}
+  function tailRun(an, f0, f1) {
+    var e = -1, i;
+    f0 = Math.max(0, f0); f1 = Math.min(an.n - 1, f1);
+    for (i = f1; i >= f0; i--) if (an.voiced[i]) { e = i; break; }
+    if (e < 0) return { ok: false, len: 0, slope: 0 };
+    var s = e, gap = 0;
+    for (i = e; i >= f0; i--) { if (an.voiced[i]) { s = i; gap = 0; } else { gap++; if (gap > 3) break; } }
+    var from = Math.max(s, e - 40), vals = [];
+    for (i = from; i <= e; i++) if (an.voiced[i]) vals.push(an.st[i]);
+    var q = Math.min(6, Math.floor(vals.length / 2)), slope = 0;
+    if (q >= 2) {
+      var h = 0, t = 0, k;
+      for (k = 0; k < q; k++) { h += vals[k]; t += vals[vals.length - 1 - k]; }
+      slope = (t - h) / q;
+    }
+    return { ok: true, len: (e - s + 1) * FS, slope: slope };
+  }
+
+  function prepareRef(chs, sr) {
+    var x = toMono8k(chs, sr), an = analyzeSignal(x);
+    var ra0 = Math.round(REF_T0 / FS), ra1 = Math.round(REF_T1 / FS);
+    ref = { an: an, f: feats(an, ra0, ra1), ra0: ra0 };
+    var vc = 0; for (var i = ra0; i <= ra1; i++) vc += an.voiced[i];
+    return { ok: true, frames: an.n, medHz: Math.round(an.medHz), voicedPct: Math.round(100 * vc / (ra1 - ra0 + 1)) };
+  }
+
+  function score(chs, sr) {
+    if (!ref) return { error: 'noref' };
+    var x = toMono8k(chs, sr), an = analyzeSignal(x);
+    var rng = activeRange(an.db, an.p95 - 30), a = rng[0], b = rng[1];
+    var dur = (b - a + 1) * FS;
+    if (a < 0 || b < 0 || dur < 12) return { error: 'short', seconds: Math.max(0, Math.round(dur)) };
+    if (dur > 110) return { error: 'long', seconds: Math.round(dur) };
+    var L0 = Math.max(0, a - 8), L1 = Math.min(an.n - 1, b + 8);
+    var vc = 0, i, k; for (i = a; i <= b; i++) vc += an.voiced[i];
+    var voicedPct = vc / (b - a + 1);
+    if (voicedPct < 0.12) return { error: 'nopitch' };
+    var FR = ref.f, FL = feats(an, L0, L1), N = FR.n, M = FL.n;
+    var P = dtw(FR, FL);
+    var T = M / N; // overall tempo ratio (learner / reference)
+    var rAn = ref.an, kOf = function (t) { return clamp(Math.round((t / FS - ref.ra0) / 2), 0, N - 1); };
+
+    // pass 1 : pairs per line
+    var lines = [], allDiff = [];
+    for (var li = 0; li < LINES.length; li++) {
+      var Ln = LINES[li];
+      var is = kOf(Ln.a[0]), ie = kOf(Ln.b[1]), iae = kOf(Ln.a[1]), ibs = kOf(Ln.b[0]);
+      var sr_ = [], sl_ = [], tt = [], nRefV = 0, chart = { t: [], r: [], l: [] };
+      for (k = is; k <= ie; k++) {
+        var jr = clamp(Math.round(P.mid[k]), 0, M - 1);
+        var rv = FR.v[k], lv = FL.v[jr];
+        if (rv) nRefV++;
+        if (rv && lv) { sr_.push(FR.s[k]); sl_.push(FL.s[jr]); allDiff.push(FL.s[jr] - FR.s[k]); }
+        if (((k - is) & 1) === 0) {
+          chart.t.push(+(((k - is) * 0.02)).toFixed(2));
+          chart.r.push(rv ? +FR.s[k].toFixed(2) : null);
+          chart.l.push(lv ? +FL.s[jr].toFixed(2) : null);
+        }
+      }
+      lines.push({ is: is, ie: ie, iae: iae, ibs: ibs, sr: sr_, sl: sl_, nRefV: nRefV, chart: chart });
+    }
+    var gOff = allDiff.length ? median(allDiff) : 0;
+
+    var res = [], sumM = 0, sumW = 0, sumR = 0, sumE = 0;
+    for (li = 0; li < LINES.length; li++) {
+      var q = lines[li], Lx = LINES[li];
+      // melody
+      var nP = q.sr.length, cov = q.nRefV ? nP / q.nRefV : 0, corr = pearson(q.sr, q.sl), se = 0;
+      for (k = 0; k < nP; k++) { var dd = q.sl[k] - q.sr[k] - gOff; se += dd * dd; }
+      var rmse = nP ? Math.sqrt(se / nP) : 9;
+      var shape = clamp((corr - 0.1) / 0.75, 0, 1), level = gauss(rmse, 4.5);
+      var melody = 100 * (0.6 * shape + 0.4 * level) * (0.55 + 0.45 * Math.min(1, cov / 0.7));
+      // rhythm
+      var jS = P.jMin[q.is], jE = P.jMax[q.ie];
+      var lenL = Math.max(1, jE - jS) * 0.02, lenR = Math.max(1, q.ie - q.is) * 0.02;
+      var durRatio = (lenL / lenR) / T;
+      var durScore = gauss(Math.abs(Math.log(Math.max(durRatio, 0.05))), 0.35);
+      var aL = Math.max(1, P.jMax[q.iae] - P.jMin[q.is]), bL = Math.max(1, P.jMax[q.ie] - P.jMin[q.ibs]);
+      var aR = Math.max(1, q.iae - q.is), bR = Math.max(1, q.ie - q.ibs);
+      var splitL = aL / (aL + bL), splitR = aR / (aR + bR), splitDiff = splitL - splitR;
+      var splitScore = gauss(Math.abs(splitDiff), 0.16);
+      var pauseScore = 1, pauseRatio = 1;
+      if (li < LINES.length - 1) {
+        var nq = lines[li + 1];
+        var gR = Math.max(0, nq.is - q.ie) * 0.02, gL = Math.max(0, P.jMin[nq.is] - P.jMax[q.ie]) * 0.02;
+        pauseRatio = ((gL / T) + 0.15) / (gR + 0.15);
+        pauseScore = gauss(Math.abs(Math.log(pauseRatio)), 0.75);
+      }
+      var rhythm = 100 * (0.5 * durScore + 0.3 * splitScore + 0.2 * pauseScore);
+      // ending
+      var rT = tailRun(rAn, ref.ra0 + 2 * q.ibs, ref.ra0 + 2 * q.ie);
+      var lT = tailRun(an, L0 + 2 * P.jMin[q.ibs], L0 + 2 * P.jMax[q.ie]);
+      var endLenRatio = 1, endSlopeDiff = 0, ending;
+      if (lT.ok && rT.ok) {
+        endLenRatio = (lT.len / Math.max(0.05, rT.len)) / T;
+        endSlopeDiff = lT.slope - rT.slope;
+        ending = 100 * (0.55 * gauss(Math.abs(Math.log(Math.max(endLenRatio, 0.05))), 0.55) + 0.45 * gauss(Math.abs(endSlopeDiff), 4.5));
+      } else ending = 20;
+      var total = 0.45 * melody + 0.35 * rhythm + 0.2 * ending;
+      var w = q.nRefV || 1;
+      sumM += melody * w; sumW += w; sumR += rhythm; sumE += ending;
+      res.push({
+        idx: li, melody: Math.round(melody), rhythm: Math.round(rhythm), ending: Math.round(ending), total: Math.round(total),
+        learnerStart: +((L0 + 2 * jS) * FS).toFixed(2), learnerEnd: +((L0 + 2 * jE) * FS).toFixed(2),
+        detail: {
+          corr: +corr.toFixed(2), rmse: +rmse.toFixed(1), coverage: +cov.toFixed(2), durRatio: +durRatio.toFixed(2),
+          splitDiff: +splitDiff.toFixed(2), pauseRatio: +pauseRatio.toFixed(2), endLenRatio: +endLenRatio.toFixed(2),
+          endSlopeDiff: +endSlopeDiff.toFixed(1), endOk: lT.ok
+        },
+        chart: q.chart
+      });
+    }
+    var nL = LINES.length;
+    var mel = sumM / sumW, rhy = sumR / nL, end = sumE / nL, tot = 0.45 * mel + 0.35 * rhy + 0.2 * end;
+    return {
+      total: Math.round(tot), melody: Math.round(mel), rhythm: Math.round(rhy), ending: Math.round(end),
+      tempo: +T.toFixed(2), seconds: +dur.toFixed(1), voicedPct: Math.round(voicedPct * 100),
+      snr: Math.round(an.p95 - an.p10), lines: res, offsetSt: +gOff.toFixed(1)
+    };
+  }
+
+  return { LINES: LINES, prepareRef: prepareRef, score: score };
+})();
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js" defer></script>
+<script defer>
+(function () {
+'use strict';
+
+/* =====================================================================
+   ตั้งค่า (แก้ตรงนี้) — ใส่ค่า firebaseConfig ของโปรเจกต์ Firebase
+   ===================================================================== */
+const FB_CONFIG = {
+  apiKey: "", authDomain: "", projectId: "", storageBucket: "", messagingSenderId: "", appId: ""
+};
+const COLLECTION = 'yani11_attempts';
+const REF_URL = 'audio/yani11.mp3';
+const LS_KEY = 'yani11.v1.attempts', LS_USER = 'yani11.v1.user';
+
+/* ===================================================================== */
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const TH = '๐๑๒๓๔๕๖๗๘๙';
+const thn = n => String(n).replace(/\d/g, d => TH[d]);
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const VERSES = [
+  ['เรือสิงห์', 'วิ่งเผ่นโผน'], ['โจนตามคลื่น', 'ฝืนฝาฟอง'], ['ดูยิ่ง', 'สิงห์ลำพอง'], ['เป็นแถวท่อง', 'ล่องตามกัน'],
+  ['นาคา', 'หน้าดังเป็น'], ['ดูเขม้น', 'เห็นขบขัน'], ['มังกร', 'ถอนพายพัน'], ['ทันแข่งหน้า', 'วาสุกรี']
+];
+const ROLES = ['สดับ', 'รับ', 'รอง', 'ส่ง'];
+const SPLIT = ['๒ / ๓', '๓ / ๓', '๒ / ๓', '๓ / ๓', '๒ / ๓', '๓ / ๓', '๒ / ๓', '๓ / ๓'];
+
+function store(key, val) { try { if (val === undefined) return JSON.parse(localStorage.getItem(key)); localStorage.setItem(key, JSON.stringify(val)); } catch (e) { return null; } }
+let toastT;
+function toast(msg, ms) {
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), ms || 3200);
+}
+function fmtTime(s) { s = Math.max(0, s); return thn(Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0')); }
+function fmtDate(ts) { try { return new Date(ts).toLocaleString('th-TH', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }); } catch (e) { return ''; } }
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+/* ---------------------------------------------------------------- engine */
+const analyzerSrc = $('#analyzer-src').textContent;
+const LocalAnalyzer = new Function(analyzerSrc + '\nreturn Analyzer;')();
+const LINES = LocalAnalyzer.LINES;
+let worker = null; const pend = new Map(); let nid = 1;
+try {
+  const code = analyzerSrc + '\nself.onmessage=function(e){var m=e.data;try{var r=m.cmd==="ref"?Analyzer.prepareRef(m.chs,m.sr):Analyzer.score(m.chs,m.sr);self.postMessage({id:m.id,ok:true,r:r});}catch(err){self.postMessage({id:m.id,ok:false,e:String(err&&err.message||err)});}};';
+  worker = new Worker(URL.createObjectURL(new Blob([code], { type: 'text/javascript' })));
+  worker.onmessage = e => { const m = e.data, p = pend.get(m.id); if (!p) return; pend.delete(m.id); m.ok ? p.res(m.r) : p.rej(new Error(m.e)); };
+  worker.onerror = () => { worker = null; pend.forEach(p => p.rej(new Error('worker'))); pend.clear(); };
+} catch (e) { worker = null; }
+function engine(cmd, chs, sr) {
+  return new Promise((res, rej) => {
+    if (worker) {
+      const id = nid++; pend.set(id, { res, rej });
+      worker.postMessage({ id, cmd, chs, sr }, chs.map(c => c.buffer));
+    } else {
+      setTimeout(() => { try { res(cmd === 'ref' ? LocalAnalyzer.prepareRef(chs, sr) : LocalAnalyzer.score(chs, sr)); } catch (e) { rej(e); } }, 40);
+    }
+  });
+}
+let actx = null;
+function ctx() { return actx || (actx = new (window.AudioContext || window.webkitAudioContext)()); }
+function decode(ab) { return new Promise((res, rej) => { const p = ctx().decodeAudioData(ab, res, rej); if (p && p.catch) p.catch(rej); }); }
+function channels(buf) { const o = []; for (let c = 0; c < buf.numberOfChannels; c++) o.push(buf.getChannelData(c).slice()); return o; }
+
+/* ---------------------------------------------------------------- state */
+const state = { tab: 'listen', ref: 'loading', user: store(LS_USER) || { name: '', room: '' }, micOk: false, last: null, rec: null, attempts: store(LS_KEY) || [] };
+
+/* ---------------------------------------------------------------- router */
+const TABS = ['listen', 'read', 'result', 'history', 'teacher'];
+function go(name, noHash) {
+  if (!TABS.includes(name)) name = 'listen';
+  if (state.tab === 'listen' && name !== 'listen') stopRef();
+  state.tab = name;
+  $$('.view').forEach(v => v.classList.toggle('is-active', v.id === 'view-' + name));
+  $$('nav [data-go]').forEach(b => { if (b.dataset.go === name) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current'); });
+  if (!noHash && location.hash !== '#' + name) history.replaceState(null, '', '#' + name);
+  if (name === 'result') $('.tabbar [data-go=result]').classList.remove('has-dot');
+  if (name === 'history') renderHistory();
+  if (name === 'teacher') teacherInit();
+  window.scrollTo(0, 0);
+  observeReveal();
+}
+document.addEventListener('click', e => { const b = e.target.closest('[data-go]'); if (b) { e.preventDefault(); go(b.dataset.go); } });
+$('#a-teacher').addEventListener('click', e => { e.preventDefault(); go('teacher'); });
+window.addEventListener('hashchange', () => go(location.hash.slice(1), true));
+
+/* ---------------------------------------------------------------- verse */
+function renderVerse(host, interactive) {
+  host.innerHTML = '';
+  for (let b = 0; b < 2; b++) {
+    const h = document.createElement('div'); h.className = 'bot'; h.textContent = 'บทที่ ' + thn(b + 1); host.appendChild(h);
+    for (let k = 0; k < 4; k++) {
+      const i = b * 4 + k, row = document.createElement('div');
+      row.className = 'wak' + (interactive ? '' : ' static'); row.dataset.i = i;
+      row.innerHTML = '<span class="no"><span>' + thn(i + 1) + '</span></span>' +
+        '<div class="txt"><span class="h" data-h="0">' + VERSES[i][0] + '</span><span class="pause"></span><span class="h" data-h="1">' + VERSES[i][1] + '</span>' +
+        '<span class="role">วรรค' + ROLES[k] + ' · ' + SPLIT[i] + ' คำ</span></div>' +
+        (interactive ? '<span class="go"><svg><use href="#i-play"/></svg></span>' : '');
+      if (interactive) { row.tabIndex = 0; row.setAttribute('role', 'button'); row.setAttribute('aria-label', 'ฟังวรรคที่ ' + (i + 1)); }
+      host.appendChild(row);
+    }
+  }
+}
+renderVerse($('#verse-listen'), true);
+renderVerse($('#verse-read'), false);
+
+/* ---------------------------------------------------------------- reference player */
+const refA = new Audio(); refA.preload = 'auto'; refA.src = REF_URL;
+const ui = { player: $('#player'), fill: $('#tr-fill'), knob: $('#tr-knob'), time: $('#pl-time'), title: $('#pl-title'), track: $('#track') };
+let seg = null, rafId = 0;
+const T0 = LINES[0].a[0] - 0.12, T1 = LINES[7].b[1] + 0.25;
+const lineS = i => LINES[i].a[0] - 0.12, lineE = i => LINES[i].b[1] + 0.18;
+$('#tr-ticks').innerHTML = LINES.map((l, i) => '<i class="tick" style="left:' + (100 * (l.a[0] - T0) / (T1 - T0)) + '%"></i>').join('');
+
+function setPlaying(on) { ui.player.classList.toggle('playing', on); }
+function stopRef() { refA.pause(); seg = null; setPlaying(false); clearKaraoke(); ui.title.textContent = 'เสียงต้นแบบทั้งบท'; }
+function playFull() {
+  seg = null;
+  if (refA.currentTime < T0 - 0.2 || refA.currentTime > T1) refA.currentTime = T0;
+  refA.play().catch(() => { }); setPlaying(true); tick();
+}
+function playLine(i) {
+  seg = { i, s: lineS(i), e: lineE(i) };
+  refA.currentTime = seg.s; refA.play().catch(() => { }); setPlaying(true); tick();
+}
+$('#btn-play').addEventListener('click', () => { if (!refA.paused) stopRef(); else playFull(); });
+$$('.speed button').forEach(b => b.addEventListener('click', () => {
+  refA.playbackRate = +b.dataset.speed; $$('.speed button').forEach(x => x.setAttribute('aria-pressed', x === b));
+}));
+$('#verse-listen').addEventListener('click', e => { const r = e.target.closest('.wak'); if (r) playLine(+r.dataset.i); });
+$('#verse-listen').addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('wak')) { e.preventDefault(); playLine(+e.target.dataset.i); } });
+refA.addEventListener('ended', () => { stopRef(); });
+
+const rows = () => $$('#verse-listen .wak');
+function clearKaraoke() { rows().forEach(r => { r.classList.remove('now'); $$('.h', r).forEach(h => h.style.removeProperty('--p')); }); }
+function tick() {
+  cancelAnimationFrame(rafId);
+  const t = refA.currentTime;
+  if (seg && t >= seg.e) {
+    if ($('#chk-loop').checked) { refA.currentTime = seg.s; } else { stopRef(); return; }
+  }
+  if (!seg && t > T1) { stopRef(); return; }
+  const rs = rows(); let active = -1;
+  LINES.forEach((L, i) => {
+    const hs = $$('.h', rs[i]), on = t >= L.a[0] - 0.12 && t <= L.b[1] + 0.3;
+    rs[i].classList.toggle('now', on);
+    if (on) {
+      active = i;
+      [L.a, L.b].forEach((rg, h) => hs[h].style.setProperty('--p', (t >= rg[0] ? clamp((t - rg[0]) / (rg[1] - rg[0]), 0, 1) * 100 : 0) + '%'));
+    } else hs.forEach(h => h.style.removeProperty('--p'));
+  });
+  const dur = T1 - T0, pr = clamp((t - T0) / dur, 0, 1) * 100;
+  ui.fill.style.width = pr + '%'; ui.knob.style.left = pr + '%'; ui.track.setAttribute('aria-valuenow', Math.round(pr));
+  ui.time.textContent = fmtTime(Math.max(0, t - T0)) + ' / ' + fmtTime(dur);
+  if (active >= 0) ui.title.textContent = 'วรรคที่ ' + thn(active + 1) + ' · ' + VERSES[active][0] + ' ' + VERSES[active][1];
+  if (!refA.paused) rafId = requestAnimationFrame(tick);
+}
+refA.addEventListener('pause', () => { if (refA.paused) setPlaying(false); });
+function seekFrom(ev) {
+  const r = ui.track.getBoundingClientRect(), p = clamp((ev.clientX - r.left) / r.width, 0, 1);
+  refA.currentTime = T0 + p * (T1 - T0); seg = null; tick();
+}
+let dragging = false;
+ui.track.addEventListener('pointerdown', e => { dragging = true; ui.track.setPointerCapture(e.pointerId); seekFrom(e); });
+ui.track.addEventListener('pointermove', e => { if (dragging) seekFrom(e); });
+ui.track.addEventListener('pointerup', () => { dragging = false; });
+ui.track.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') { refA.currentTime = Math.min(T1, refA.currentTime + 2); tick(); }
+  if (e.key === 'ArrowLeft') { refA.currentTime = Math.max(T0, refA.currentTime - 2); tick(); }
+});
+
+/* ---------------------------------------------------------------- reference analysis */
+const refChip = $('#ref-chip');
+function refState(s, msg) {
+  state.ref = s; refChip.textContent = msg; refChip.className = 'chip' + (s === 'ready' ? ' ok' : s === 'error' ? ' bad' : '');
+  updateRecBtn();
+}
+async function loadRef() {
+  refState('loading', 'กำลังเตรียมเสียงต้นแบบ…');
+  try {
+    const r = await fetch(REF_URL); if (!r.ok) throw new Error('http ' + r.status);
+    const buf = await decode(await r.arrayBuffer());
+    await engine('ref', channels(buf), buf.sampleRate);
+    refState('ready', 'เสียงต้นแบบพร้อมแล้ว');
+  } catch (e) {
+    refState('error', location.protocol === 'file:' ? 'ต้องเปิดผ่านเว็บ (https) จึงจะวิเคราะห์ได้' : 'โหลดเสียงต้นแบบไม่สำเร็จ ลองรีเฟรช');
+  }
+}
+
+/* ---------------------------------------------------------------- user fields */
+const inName = $('#in-name'), inRoom = $('#in-room');
+inName.value = state.user.name || ''; inRoom.value = state.user.room || '';
+[inName, inRoom].forEach(el => el.addEventListener('input', () => { state.user = { name: inName.value.trim(), room: inRoom.value.trim() }; store(LS_USER, state.user); updateRecBtn(); }));
+
+/* ---------------------------------------------------------------- mic helpers */
+const meterEl = $('#meter'); const NB = 22;
+meterEl.innerHTML = '<i></i>'.repeat(NB);
+const mbars = $$('i', meterEl);
+let mic = null, meterRaf = 0;
+async function openMic() {
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) throw new Error('nomic');
+  const stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+  const c = ctx(); if (c.state === 'suspended') await c.resume();
+  const src = c.createMediaStreamSource(stream), an = c.createAnalyser(); an.fftSize = 2048; src.connect(an);
+  mic = { stream, src, an, buf: new Float32Array(an.fftSize), db: -90 };
+  const loop = () => {
+    if (!mic) return;
+    mic.an.getFloatTimeDomainData(mic.buf);
+    let s = 0; for (let i = 0; i < mic.buf.length; i++) s += mic.buf[i] * mic.buf[i];
+    const db = 10 * Math.log10(s / mic.buf.length + 1e-10); mic.db = db;
+    const lv = clamp((db + 60) / 50, 0, 1), n = Math.round(lv * NB);
+    mbars.forEach((b, i) => { b.classList.toggle('on', i < n); b.classList.toggle('hot', i < n && i > NB - 3); });
+    meterRaf = requestAnimationFrame(loop);
+  };
+  loop();
+  return mic;
+}
+function closeMic() {
+  cancelAnimationFrame(meterRaf);
+  if (mic) { try { mic.src.disconnect(); } catch (e) { } mic.stream.getTracks().forEach(t => t.stop()); mic = null; }
+  mbars.forEach(b => b.classList.remove('on', 'hot'));
+}
+function setStatus(kind, msg) { const s = $('#mic-status'); s.className = 'status ' + (kind || ''); $('#mic-msg').textContent = msg; }
+function micError(e) {
+  const n = e && e.name;
+  if (e && e.message === 'nomic') return 'เบราว์เซอร์นี้ไม่รองรับการอัดเสียง ลองใช้ Chrome หรือ Safari รุ่นใหม่ และเปิดผ่าน https';
+  if (n === 'NotAllowedError' || n === 'SecurityError') return 'ยังไม่ได้อนุญาตใช้ไมโครโฟน กดสัญลักษณ์แม่กุญแจที่แถบที่อยู่แล้วเลือก “อนุญาต”';
+  if (n === 'NotFoundError') return 'ไม่พบไมโครโฟนในอุปกรณ์นี้';
+  return 'เปิดไมโครโฟนไม่สำเร็จ ลองปิดแอปอื่นที่ใช้ไมค์อยู่แล้วทดสอบใหม่';
+}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+async function sample(ms) { const a = []; const t = performance.now(); while (performance.now() - t < ms) { if (!mic) break; a.push(mic.db); await sleep(40); } return a; }
+$('#btn-mictest').addEventListener('click', async () => {
+  const btn = $('#btn-mictest'); btn.disabled = true;
+  try {
+    setStatus('warn', 'กำลังเปิดไมโครโฟน…'); await openMic();
+    setStatus('warn', 'เงียบสักครู่ ๑ วินาที เพื่อวัดเสียงรบกวน…');
+    const nz = (await sample(1300)).sort((a, b) => a - b); const noise = nz[Math.floor(nz.length / 2)];
+    setStatus('warn', 'ลองพูดออกเสียงดัง ๆ ว่า “เรือสิงห์ วิ่งเผ่นโผน”');
+    const pk = (await sample(3200)).sort((a, b) => a - b); const peak = pk[Math.floor(pk.length * 0.95)];
+    closeMic();
+    const snr = peak - noise;
+    if (peak < -48) { state.micOk = false; setStatus('bad', 'ได้ยินเสียงเบามาก ขยับเข้าใกล้ไมค์อีกนิด หรือเช็กว่าไมค์ไม่ถูกปิดเสียง'); }
+    else if (peak > -4) { state.micOk = false; setStatus('warn', 'เสียงดังจนอาจแตก ถอยห่างจากไมค์อีกเล็กน้อย'); }
+    else if (snr < 18) { state.micOk = true; setStatus('warn', 'มีเสียงรบกวนค่อนข้างมาก ถ้าย้ายไปที่เงียบกว่าได้ ผลจะแม่นยำขึ้น (ยังอ่านต่อได้)'); }
+    else { state.micOk = true; setStatus('ok', 'ไมค์พร้อมใช้งาน เสียงชัดและเงียบพอ'); }
+  } catch (e) { closeMic(); setStatus('bad', micError(e)); }
+  btn.disabled = false;
+});
+
+/* ---------------------------------------------------------------- recording */
+const recBtn = $('#btn-rec'), timerEl = $('#rec-timer'), hintEl = $('#rec-hint');
+function updateRecBtn() {
+  const busy = state.rec && state.rec.on;
+  recBtn.disabled = !busy && state.ref !== 'ready';
+}
+function pickMime() {
+  const c = ['audio/webm;codecs=opus', 'audio/mp4', 'audio/webm', 'audio/ogg;codecs=opus'];
+  if (!window.MediaRecorder) return null;
+  for (const m of c) { try { if (MediaRecorder.isTypeSupported(m)) return m; } catch (e) { } }
+  return '';
+}
+recBtn.addEventListener('click', async () => {
+  if (state.rec && state.rec.on) { stopRec(); return; }
+  if (!state.user.name) { toast('กรอกชื่อก่อนเริ่มอ่านนะครับ'); inName.focus(); inName.scrollIntoView({ block: 'center', behavior: 'smooth' }); return; }
+  try {
+    const m = await openMic();
+    const mime = pickMime(); if (mime === null) throw new Error('nomic');
+    const mr = new MediaRecorder(m.stream, mime ? { mimeType: mime } : undefined), chunks = [];
+    mr.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+    mr.onstop = () => onRecorded(new Blob(chunks, { type: mr.mimeType || mime || 'audio/webm' }));
+    state.rec = { on: true, mr, t0: performance.now() };
+    mr.start(300);
+    recBtn.classList.add('on'); hintEl.textContent = 'กำลังบันทึก… อ่านทั้ง ๘ วรรค แล้วแตะปุ่มเพื่อหยุด';
+    $('#myrec').classList.remove('show');
+    state.rec.iv = setInterval(() => {
+      const s = (performance.now() - state.rec.t0) / 1000; timerEl.textContent = fmtTime(s);
+      if (s > 100) stopRec();
+    }, 200);
+  } catch (e) { closeMic(); toast(micError(e), 5200); }
+});
+function stopRec() {
+  if (!state.rec || !state.rec.on) return;
+  state.rec.on = false; clearInterval(state.rec.iv); state.rec.dur = (performance.now() - state.rec.t0) / 1000;
+  try { state.rec.mr.stop(); } catch (e) { }
+  closeMic(); recBtn.classList.remove('on'); hintEl.textContent = 'แตะปุ่มเพื่อเริ่มอ่านใหม่อีกครั้ง';
+}
+const STEPS = ['เตรียมเสียงที่อัด…', 'จับระดับเสียงสูงต่ำ…', 'เทียบจังหวะกับต้นแบบ…', 'ฟังท้ายวรรคทีละวรรค…', 'ให้คะแนนและเรียบเรียงคำแนะนำ…'];
+let stepIv;
+function overlay(on) {
+  $('#analyzing').classList.toggle('show', on); clearInterval(stepIv);
+  if (on) { let k = 0; $('#an-step').textContent = STEPS[0]; stepIv = setInterval(() => { k = Math.min(k + 1, STEPS.length - 1); $('#an-step').textContent = STEPS[k]; }, 900); }
+}
+async function onRecorded(blob) {
+  if (state.rec && state.rec.dur < 8) { toast('บันทึกสั้นเกินไป ลองอ่านให้จบทั้ง ๘ วรรค', 4500); return; }
+  if (state.last && state.last.url) URL.revokeObjectURL(state.last.url);
+  const url = URL.createObjectURL(blob);
+  $('#my-audio').src = url; $('#myrec').classList.add('show');
+  overlay(true);
+  try {
+    const buf = await decode(await blob.arrayBuffer());
+    const res = await engine('score', channels(buf), buf.sampleRate);
+    overlay(false);
+    if (res.error) { explainError(res); return; }
+    state.last = { res, url, at: Date.now() };
+    const attempt = saveAttempt(res);
+    renderResult(res, attempt);
+    $('.tabbar [data-go=result]').classList.add('has-dot');
+    go('result');
+  } catch (e) {
+    overlay(false);
+    toast('วิเคราะห์เสียงไม่สำเร็จ ลองอัดใหม่อีกครั้ง (' + (e && e.message ? e.message : 'ไม่ทราบสาเหตุ') + ')', 6000);
+  }
+}
+function explainError(r) {
+  const m = {
+    short: 'ได้ยินเสียงอ่านเพียงประมาณ ' + thn(r.seconds || 0) + ' วินาที ลองอ่านให้จบทั้ง ๘ วรรคแล้วค่อยกดหยุด',
+    long: 'บันทึกยาวเกินไป ลองอ่านเฉพาะบทนี้ให้จบแล้วกดหยุดทันที',
+    nopitch: 'จับระดับเสียงไม่ได้ เสียงอาจเบาหรือมีเสียงรบกวนมาก ลองเข้าใกล้ไมค์และอ่านออกเสียงให้ชัดขึ้น',
+    noref: 'เสียงต้นแบบยังไม่พร้อม ลองรอสักครู่แล้วอ่านใหม่'
+  };
+  toast(m[r.error] || 'วิเคราะห์ไม่สำเร็จ ลองอ่านใหม่อีกครั้ง', 6500);
+}
+
+/* ---------------------------------------------------------------- feedback text */
+function grade(t) {
+  if (t >= 88) return ['ไพเราะนัก', 'อ่านได้ใกล้เคียงต้นแบบมาก ทั้งทำนองและจังหวะ'];
+  if (t >= 75) return ['ดีมาก', 'ทำนองและจังหวะอยู่ในเกณฑ์ดี เหลือปรับอีกเล็กน้อยก็จะไพเราะยิ่งขึ้น'];
+  if (t >= 60) return ['ใกล้เคียงแล้ว', 'จับแนวทำนองได้แล้ว ลองฟังต้นแบบซ้ำแล้วปรับบางวรรค'];
+  return ['ฝึกต่ออีกนิด', 'ลองฟังต้นแบบทีละวรรค อ่านตามช้า ๆ แล้วค่อยเพิ่มความเร็ว'];
+}
+function lineNotes(L) {
+  const d = L.detail, n = [];
+  if (L.melody < 70) n.push([L.melody, d.coverage < 0.5 ? 'เสียงขาดหายหลายช่วง ลองออกเสียงให้ต่อเนื่องและดังขึ้นอีกนิด' : 'เสียงสูงต่ำยังต่างจากต้นแบบ ลองฟังแล้วตามเสียงสูงต่ำทีละคำ']);
+  if (L.rhythm < 75) {
+    if (d.splitDiff > 0.1) n.push([L.rhythm, 'ช่วงก่อนเว้นจังหวะกลางวรรคยาวไปหน่อย ลองเว้นให้ตรงจุด ' + '◆']);
+    else if (d.splitDiff < -0.1) n.push([L.rhythm, 'ช่วงก่อนเว้นจังหวะกลางวรรคสั้นไปหน่อย ลองยืดคำต้นวรรคอีกนิด']);
+    else if (d.durRatio > 1.25) n.push([L.rhythm, 'วรรคนี้อ่านช้ากว่าส่วนอื่นของบท']);
+    else if (d.durRatio < 0.8) n.push([L.rhythm, 'วรรคนี้อ่านเร็วกว่าส่วนอื่นของบท ลองผ่อนจังหวะลง']);
+    else n.push([L.rhythm, 'จังหวะการหยุดพักระหว่างวรรคยังต่างจากต้นแบบ']);
+  }
+  if (L.ending < 75) {
+    if (!d.endOk) n.push([L.ending, 'ท้ายวรรคเสียงเบาหรือขาดหาย ลองทอดเสียงให้ชัดจนจบวรรค']);
+    else if (d.endLenRatio < 0.7) n.push([L.ending, 'ทอดเสียงท้ายวรรคให้ยาวขึ้นอีกนิด']);
+    else if (d.endLenRatio > 1.45) n.push([L.ending, 'ลากเสียงท้ายวรรคนานไปหน่อย']);
+    else if (d.endSlopeDiff > 3) n.push([L.ending, 'ปลายเสียงท้ายวรรคยกสูงกว่าต้นแบบ ลองให้เสียงทอดลง']);
+    else if (d.endSlopeDiff < -3) n.push([L.ending, 'ปลายเสียงท้ายวรรคตกลงมากกว่าต้นแบบ ลองรักษาระดับเสียงไว้']);
+    else n.push([L.ending, 'การทอดเสียงท้ายวรรคยังต่างจากต้นแบบเล็กน้อย']);
+  }
+  n.sort((a, b) => a[0] - b[0]);
+  return n.slice(0, 2).map(x => x[1]);
+}
+function summaryHtml(res) {
+  const dims = [['ทำนอง', res.melody], ['จังหวะ', res.rhythm], ['การทอดเสียงท้ายวรรค', res.ending]];
+  const s = dims.slice().sort((a, b) => b[1] - a[1]), best = s[0], worst = s[2];
+  const weak = res.lines.slice().sort((a, b) => a.total - b.total).filter(l => l.total < 75).slice(0, 3).map(l => thn(l.idx + 1));
+  const out = [];
+  out.push('รอบนี้<b>' + best[0] + '</b>เป็นจุดเด่น (' + thn(best[1]) + ' คะแนน)' + (worst[1] < 80 ? ' ส่วน<b>' + worst[0] + '</b>ยังพัฒนาได้อีก (' + thn(worst[1]) + ' คะแนน)' : ' และทุกด้านอยู่ในเกณฑ์ดี'));
+  const tp = Math.round(Math.abs(res.tempo - 1) * 100);
+  if (res.tempo > 1.18) out.push('โดยรวมอ่านช้ากว่าต้นแบบประมาณ ' + thn(tp) + '% การอ่านช้าไม่ผิด แต่ลองเร่งให้ลื่นไหลขึ้นเมื่อจำทำนองได้แล้ว');
+  else if (res.tempo < 0.85) out.push('โดยรวมอ่านเร็วกว่าต้นแบบประมาณ ' + thn(tp) + '% ลองผ่อนจังหวะและทอดเสียงท้ายวรรคให้นานขึ้น');
+  else out.push('ความเร็วโดยรวมใกล้เคียงต้นแบบ');
+  out.push(weak.length ? 'ควรฟังต้นแบบ<b>วรรคที่ ' + weak.join(' ') + '</b>ซ้ำ แล้วอ่านตามช้า ๆ ทีละวรรคก่อนรวมทั้งบท' : 'ทุกวรรคอยู่ในเกณฑ์ดี ลองอ่านอีกรอบเพื่อรักษาความสม่ำเสมอ');
+  return out.map(x => '<p>' + x + '</p>').join('');
+}
+
+/* ---------------------------------------------------------------- charts */
+function segPath(xs, ys, x, y) {
+  let d = '', pen = false;
+  for (let i = 0; i < xs.length; i++) {
+    if (ys[i] == null) { pen = false; continue; }
+    d += (pen ? 'L' : 'M') + x(xs[i]).toFixed(1) + ' ' + y(ys[i]).toFixed(1); pen = true;
+  }
+  return d;
+}
+function chartSvg(xsAll, refY, lrnY, o) {
+  const W = o.w, H = o.h, pl = 6, pr = 6, pt = o.top || 8, pb = 8;
+  const vals = refY.concat(lrnY).filter(v => v != null);
+  let lo = Math.min.apply(null, vals.concat([-2])) - 1, hi = Math.max.apply(null, vals.concat([2])) + 1;
+  if (hi - lo < 9) { const m = (hi + lo) / 2; lo = m - 4.5; hi = m + 4.5; }
+  const tmax = xsAll[xsAll.length - 1] || 1;
+  const x = t => pl + (W - pl - pr) * t / tmax, y = v => pt + (H - pt - pb) * (1 - (v - lo) / (hi - lo));
+  let g = '';
+  (o.bands || []).forEach((b, i) => { if (i % 2 === 0) g += '<rect x="' + x(b[0]).toFixed(1) + '" y="0" width="' + (x(b[1]) - x(b[0])).toFixed(1) + '" height="' + H + '" fill="#f4e7c4" opacity=".55"/>'; g += '<text x="' + ((x(b[0]) + x(b[1])) / 2).toFixed(1) + '" y="11" text-anchor="middle" font-size="9.5" fill="#7a7c92" font-family="Sarabun,sans-serif">' + thn(i + 1) + '</text>'; });
+  g += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + y(0).toFixed(1) + '" y2="' + y(0).toFixed(1) + '" stroke="#b98618" stroke-width=".8" stroke-dasharray="3 4" opacity=".7"/>';
+  (o.marks || []).forEach(m => { g += '<line x1="' + x(m).toFixed(1) + '" x2="' + x(m).toFixed(1) + '" y1="' + pt + '" y2="' + (H - pb) + '" stroke="#dfa82a" stroke-width="1.2" stroke-dasharray="1.5 3"/>'; });
+  g += '<path d="' + segPath(xsAll, refY, x, y) + '" fill="none" stroke="#13235a" stroke-width="' + (o.sw || 3) + '" stroke-linecap="round" stroke-linejoin="round"/>';
+  g += '<path d="' + segPath(xsAll, lrnY, x, y) + '" fill="none" stroke="#c2412d" stroke-width="' + ((o.sw || 3) - 0.8) + '" stroke-linecap="round" stroke-linejoin="round"/>';
+  return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(o.label) + '">' + g + '</svg>';
+}
+function lineChart(L) {
+  const Ln = LINES[L.idx], sp = (Ln.a[1] + Ln.b[0]) / 2 - Ln.a[0] + 0.0;
+  return chartSvg(L.chart.t, L.chart.r, L.chart.l, { w: 320, h: 92, marks: [sp], label: 'กราฟเทียบเสียงสูงต่ำวรรคที่ ' + (L.idx + 1) + ' เส้นกรมท่าคือต้นแบบ เส้นสีชาดคือเสียงของเรา' });
+}
+function overviewChart(res) {
+  const xs = [], r = [], l = [], bands = [], base = LINES[0].a[0];
+  res.lines.forEach(L => {
+    const off = LINES[L.idx].a[0] - base, t0 = off;
+    L.chart.t.forEach((t, k) => { xs.push(+(t + off).toFixed(2)); r.push(L.chart.r[k]); l.push(L.chart.l[k]); });
+    bands.push([t0, t0 + (LINES[L.idx].b[1] - LINES[L.idx].a[0])]);
+  });
+  return chartSvg(xs, r, l, { w: 340, h: 116, top: 16, sw: 2.2, bands, label: 'กราฟเทียบเสียงสูงต่ำตลอดทั้งบท' });
+}
+function sparkSvg(vals) {
+  const W = 320, H = 90, pl = 14, pr = 14, pt = 10, pb = 14;
+  if (vals.length < 2) return '';
+  const x = i => pl + (W - pl - pr) * i / (vals.length - 1), y = v => pt + (H - pt - pb) * (1 - v / 100);
+  let d = '', dots = '';
+  vals.forEach((v, i) => { d += (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1); dots += '<circle cx="' + x(i).toFixed(1) + '" cy="' + y(v).toFixed(1) + '" r="4" fill="#efc04a" stroke="#13235a" stroke-width="1.5"/>'; });
+  return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="แนวโน้มคะแนนรวมแต่ละครั้ง"><line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + y(75) + '" y2="' + y(75) + '" stroke="#b98618" stroke-width=".8" stroke-dasharray="3 4"/><path d="' + d + '" fill="none" stroke="#13235a" stroke-width="2.5" stroke-linejoin="round"/>' + dots + '</svg>';
+}
+
+/* ---------------------------------------------------------------- result view */
+let learnerA = null, learnerStop = 0;
+function playLearner(L) {
+  if (!state.last || !state.last.url) return;
+  refA.pause(); setPlaying(false);
+  if (!learnerA) learnerA = new Audio(state.last.url); else if (learnerA.src !== state.last.url) learnerA.src = state.last.url;
+  const s = Math.max(0, L.learnerStart - 0.15), e = L.learnerEnd + 0.3;
+  learnerA.currentTime = s; learnerA.play().catch(() => { });
+  clearInterval(learnerStop); learnerStop = setInterval(() => { if (learnerA.currentTime >= e || learnerA.paused) { learnerA.pause(); clearInterval(learnerStop); } }, 60);
+}
+function playRefSegment(i) {
+  if (learnerA) learnerA.pause();
+  seg = { i, s: lineS(i), e: lineE(i) }; refA.currentTime = seg.s; refA.play().catch(() => { });
+  clearInterval(learnerStop); const iv = setInterval(() => { if (refA.currentTime >= seg.e || refA.paused) { refA.pause(); clearInterval(iv); seg = null; } }, 60);
+}
+function badgeCls(v) { return v >= 80 ? 'hi' : v < 60 ? 'lo' : ''; }
+function countUp(el, to, ms) { const t0 = performance.now(); const f = now => { const p = clamp((now - t0) / ms, 0, 1), e = 1 - Math.pow(1 - p, 3); el.textContent = thn(Math.round(to * e)); if (p < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }
+function renderResult(res, attempt) {
+  const [g, sub] = grade(res.total), host = $('#result-body'), C = 2 * Math.PI * 78;
+  const dim = (name, v, hint) => '<div class="dim"><div class="row"><span>' + name + '</span><span>' + thn(v) + '</span></div><div class="bar"><i data-w="' + v + '"></i></div><div class="hint">' + hint + '</div></div>';
+  const tempoTxt = res.tempo > 1.18 ? 'อ่านช้ากว่าต้นแบบ ' + thn(Math.round((res.tempo - 1) * 100)) + '%' : res.tempo < 0.85 ? 'อ่านเร็วกว่าต้นแบบ ' + thn(Math.round((1 - res.tempo) * 100)) + '%' : 'ความเร็วใกล้เคียงต้นแบบ';
+  const q = res.snr >= 30 ? ['คุณภาพเสียงดี', 'ok'] : res.snr >= 18 ? ['มีเสียงรบกวนเล็กน้อย', ''] : ['เสียงรบกวนมาก ผลอาจคลาดเคลื่อน', 'bad'];
+  host.innerHTML =
+    '<div class="card"><div class="score-hero">' +
+    '<div class="ring"><svg viewBox="0 0 176 176"><circle class="bg" cx="88" cy="88" r="78" fill="none" stroke-width="12"/><circle class="fg" id="ring-fg" cx="88" cy="88" r="78" fill="none" stroke-width="12" stroke-dasharray="' + C.toFixed(1) + '" stroke-dashoffset="' + C.toFixed(1) + '"/></svg><div class="num"><span id="score-num">๐</span><small>จาก ๑๐๐</small></div></div>' +
+    '<div><p class="grade">' + g + '</p><p class="note" style="margin:2px 0 10px">' + sub + '</p>' +
+    '<div class="chips" style="justify-content:flex-start;margin-bottom:12px"><span class="chip">' + tempoTxt + '</span><span class="chip ' + q[1] + '">' + q[0] + '</span><span class="chip">ยาว ' + thn(Math.round(res.seconds)) + ' วินาที</span></div>' +
+    '<div class="dims">' + dim('ทำนอง (เสียงสูงต่ำ)', res.melody, 'เส้นเสียงสูงต่ำใกล้ต้นแบบแค่ไหน') + dim('จังหวะ', res.rhythm, 'ความยาวแต่ละวรรค จุดเว้น และการหยุดพัก') + dim('การทอดเสียงท้ายวรรค', res.ending, 'ความยาวและปลายเสียงท้ายวรรค') + '</div></div></div></div>' +
+    '<div class="card sum"><h3>คำแนะนำจากครู</h3>' + summaryHtml(res) + '</div>' +
+    '<div class="card"><h3>เส้นเสียงสูงต่ำตลอดบท</h3><div class="chartbox">' + overviewChart(res) + '</div>' +
+    '<div class="legend"><span><i style="background:#13235a"></i>ต้นแบบ</span><span><i style="background:#c2412d"></i>เสียงของเรา</span><span><i style="background:repeating-linear-gradient(90deg,#b98618 0 4px,transparent 4px 8px);height:2px"></i>ระดับเสียงกลางของผู้อ่าน</span></div>' +
+    '<p class="note" style="margin:8px 0 0">ระบบปรับระดับเสียงให้เทียบกันตามช่วงเสียงของแต่ละคน ผู้ชายหรือผู้หญิงจึงเทียบกับต้นแบบได้อย่างเป็นธรรม</p></div>' +
+    '<h2 class="sec" style="font-size:19px"><span class="no"><span>๘</span></span>รายวรรค</h2><div id="lines"></div>' +
+    '<div class="card"><p class="note" id="save-note" style="margin:0 0 12px"></p><div class="acts"><button class="btn gold" data-go="read"><svg><use href="#i-mic"/></svg>อ่านใหม่อีกครั้ง</button><button class="btn ghost" data-go="listen"><svg><use href="#i-ear"/></svg>กลับไปฟังต้นแบบ</button></div></div>';
+  const lines = $('#lines', host);
+  res.lines.forEach(L => {
+    const notes = lineNotes(L), c = document.createElement('div');
+    c.className = 'card lcard reveal';
+    c.innerHTML = '<div class="hd"><span class="no"><span>' + thn(L.idx + 1) + '</span></span><div class="t">' + VERSES[L.idx][0] + ' <span class="pause" style="margin:0 6px;width:7px;height:7px"></span> ' + VERSES[L.idx][1] + '<small>วรรค' + ROLES[L.idx % 4] + '</small></div><span class="badge ' + badgeCls(L.total) + '">' + thn(L.total) + '</span></div>' +
+      '<div class="chartbox" style="margin-top:10px">' + lineChart(L) + '</div>' +
+      '<div class="mini3"><div>ทำนอง<b>' + thn(L.melody) + '</b><div class="bar"><i style="width:' + L.melody + '%"></i></div></div><div>จังหวะ<b>' + thn(L.rhythm) + '</b><div class="bar"><i style="width:' + L.rhythm + '%"></i></div></div><div>ท้ายวรรค<b>' + thn(L.ending) + '</b><div class="bar"><i style="width:' + L.ending + '%"></i></div></div></div>' +
+      '<ul>' + (notes.length ? notes.map(n => '<li>' + n + '</li>').join('') : '<li>วรรคนี้ใกล้เคียงต้นแบบมาก</li>') + '</ul>' +
+      '<div class="acts"><button class="btn small ghost" data-ref="' + L.idx + '"><svg><use href="#i-play"/></svg>ต้นแบบ</button><button class="btn small" data-me="' + L.idx + '"><svg><use href="#i-play"/></svg>เสียงของเรา</button></div>';
+    lines.appendChild(c);
+  });
+  $$('[data-ref]', host).forEach(b => b.addEventListener('click', () => playRefSegment(+b.dataset.ref)));
+  $$('[data-me]', host).forEach(b => b.addEventListener('click', () => playLearner(res.lines[+b.dataset.me])));
+  $('#result-empty').hidden = true; host.hidden = false;
+  requestAnimationFrame(() => {
+    countUp($('#score-num'), res.total, 1500);
+    $('#ring-fg').style.strokeDashoffset = (C * (1 - res.total / 100)).toFixed(1);
+    $$('.dim .bar i', host).forEach(i => i.style.width = i.dataset.w + '%');
+  });
+  updateSaveNote(attempt);
+  observeReveal();
+}
+function updateSaveNote(a) {
+  const el = $('#save-note'); if (!el) return;
+  if (!a) { el.textContent = ''; return; }
+  el.textContent = a.synced ? 'บันทึกผลเข้าฐานข้อมูลของครูเรียบร้อยแล้ว' : (fb.on ? 'กำลังบันทึกผลเข้าฐานข้อมูล…' : 'บันทึกผลไว้ในเครื่องนี้แล้ว (ยังไม่ได้เชื่อมฐานข้อมูล)');
+}
+
+/* ---------------------------------------------------------------- reveal */
+let io = null;
+function observeReveal() {
+  if (!('IntersectionObserver' in window)) { $$('.reveal').forEach(e => e.classList.add('in')); return; }
+  if (!io) io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  $$('.reveal:not(.in)').forEach(e => io.observe(e));
+}
+
+/* ---------------------------------------------------------------- attempts store + history */
+function saveAttempt(res) {
+  const a = {
+    id: 'a' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), ts: Date.now(),
+    name: state.user.name, room: state.user.room, total: res.total, melody: res.melody, rhythm: res.rhythm, ending: res.ending,
+    tempo: res.tempo, seconds: res.seconds, lines: res.lines.map(l => ({ m: l.melody, r: l.rhythm, e: l.ending, t: l.total })), synced: false
+  };
+  state.attempts.unshift(a); state.attempts = state.attempts.slice(0, 60); store(LS_KEY, state.attempts);
+  syncPending();
+  return a;
+}
+function renderHistory() {
+  const list = $('#hist-list'), arr = state.attempts.slice();
+  $('#hist-empty').hidden = arr.length > 0;
+  const ch = $('#hist-chart'); ch.hidden = arr.length < 2;
+  if (arr.length >= 2) ch.innerHTML = sparkSvg(arr.slice(0, 14).reverse().map(a => a.total));
+  list.innerHTML = arr.map(a => '<li><span class="sc">' + thn(a.total) + '</span><span class="meta"><b>' + esc(a.name || 'ไม่ระบุชื่อ') + (a.room ? ' · ' + esc(a.room) : '') + '</b>' + fmtDate(a.ts) + ' · ทำนอง ' + thn(a.melody) + ' · จังหวะ ' + thn(a.rhythm) + ' · ท้ายวรรค ' + thn(a.ending) + '</span><span class="sync">' + (a.synced ? 'ซิงก์แล้ว' : 'ในเครื่อง') + '</span></li>').join('');
+  $('#hist-sync').textContent = fb.on ? (fb.user ? 'เชื่อมฐานข้อมูลแล้ว ครูดูผลของเราได้ ส่วนประวัติผูกกับเครื่องนี้' : 'กำลังเชื่อมฐานข้อมูล…') : 'ยังไม่ได้เชื่อมฐานข้อมูล ผลเก็บไว้ในเครื่องนี้';
+}
+
+/* ---------------------------------------------------------------- firebase */
+const fb = { on: false, user: null, db: null, auth: null };
+function initFirebase() {
+  if (fb.on || !FB_CONFIG.apiKey || typeof firebase === 'undefined') return;
+  try {
+    firebase.initializeApp(FB_CONFIG); fb.auth = firebase.auth(); fb.db = firebase.firestore(); fb.on = true;
+    fb.auth.onAuthStateChanged(u => {
+      fb.user = u;
+      if (u && !u.isAnonymous) return;
+      if (!u) { fb.auth.signInAnonymously().catch(() => { fb.on = false; }); return; }
+      loadRemote(); syncPending();
+    });
+  } catch (e) { fb.on = false; }
+}
+async function syncPending() {
+  if (!fb.on || !fb.user || !fb.user.isAnonymous) return;
+  for (const a of state.attempts.filter(x => !x.synced)) {
+    try {
+      await fb.db.collection(COLLECTION).doc(a.id).set({
+        uid: fb.user.uid, name: a.name || '', room: a.room || '', total: a.total, melody: a.melody, rhythm: a.rhythm, ending: a.ending,
+        tempo: a.tempo, seconds: a.seconds, lines: a.lines, clientAt: a.ts, createdAt: firebase.firestore.FieldValue.serverTimestamp(), app: 'yani11', v: 1
+      });
+      a.synced = true; store(LS_KEY, state.attempts);
+      if (state.last && state.last.at && Math.abs(a.ts - state.last.at) < 60000) updateSaveNote(a);
+    } catch (e) { break; }
+  }
+  if (state.tab === 'history') renderHistory();
+}
+async function loadRemote() {
+  try {
+    const qs = await fb.db.collection(COLLECTION).where('uid', '==', fb.user.uid).get();
+    const have = new Set(state.attempts.map(a => a.id));
+    qs.forEach(d => { if (!have.has(d.id)) { const x = d.data(); state.attempts.push({ id: d.id, ts: x.clientAt || Date.now(), name: x.name, room: x.room, total: x.total, melody: x.melody, rhythm: x.rhythm, ending: x.ending, tempo: x.tempo, seconds: x.seconds, lines: x.lines || [], synced: true }); } });
+    state.attempts.sort((a, b) => b.ts - a.ts); state.attempts = state.attempts.slice(0, 60); store(LS_KEY, state.attempts);
+    if (state.tab === 'history') renderHistory();
+  } catch (e) { }
+}
+
+/* ---------------------------------------------------------------- teacher board */
+let tRows = [];
+function teacherInit() {
+  if (!fb.on) { $('#t-msg').textContent = 'ยังไม่ได้เชื่อมฐานข้อมูล Firebase (ใส่ firebaseConfig ใน index.html)'; $('#t-login').disabled = true; }
+}
+$('#t-login').addEventListener('click', async () => {
+  if (!fb.on) return;
+  try {
+    const res = await fb.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    $('#t-msg').textContent = 'เข้าสู่ระบบเป็น ' + res.user.email;
+    const qs = await fb.db.collection(COLLECTION).orderBy('createdAt', 'desc').limit(400).get();
+    tRows = qs.docs.map(d => Object.assign({ id: d.id }, d.data()));
+    $('#t-filter').hidden = false; $('#t-csv').hidden = false; $('#t-tbl').hidden = false; drawTable();
+  } catch (e) { $('#t-msg').textContent = 'เข้าสู่ระบบหรืออ่านข้อมูลไม่สำเร็จ: ' + (e.code === 'permission-denied' ? 'บัญชีนี้ไม่มีสิทธิ์ดูข้อมูลของครู' : (e.message || e)); }
+});
+function filtered() { const q = $('#t-room').value.trim(); return q ? tRows.filter(r => (r.room || '').includes(q)) : tRows; }
+function drawTable() {
+  const rs = filtered();
+  $('#t-tbl').innerHTML = '<table><thead><tr><th>เวลา</th><th>ชื่อ</th><th>ห้อง</th><th>รวม</th><th>ทำนอง</th><th>จังหวะ</th><th>ท้ายวรรค</th></tr></thead><tbody>' +
+    rs.map(r => '<tr><td>' + fmtDate(r.clientAt) + '</td><td>' + esc(r.name) + '</td><td>' + esc(r.room) + '</td><td><b>' + r.total + '</b></td><td>' + r.melody + '</td><td>' + r.rhythm + '</td><td>' + r.ending + '</td></tr>').join('') + '</tbody></table>';
+}
+$('#t-room').addEventListener('input', drawTable);
+$('#t-csv').addEventListener('click', () => {
+  const rows = [['เวลา', 'ชื่อ', 'ห้อง', 'รวม', 'ทำนอง', 'จังหวะ', 'ท้ายวรรค', 'ความเร็วเทียบต้นแบบ']].concat(filtered().map(r => [new Date(r.clientAt || 0).toISOString(), r.name, r.room, r.total, r.melody, r.rhythm, r.ending, r.tempo]));
+  const csv = '﻿' + rows.map(r => r.map(c => '"' + String(c == null ? '' : c).replace(/"/g, '""') + '"').join(',')).join('\r\n');
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' })); a.download = 'yani11-results.csv'; a.click();
+});
+
+/* ---------------------------------------------------------------- install (add to home screen) */
+let deferred = null;
+const standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; $('#install-card').hidden = false; $('#install-btn').hidden = false; });
+$('#install-btn').addEventListener('click', async () => { if (!deferred) return; deferred.prompt(); try { await deferred.userChoice; } catch (e) { } deferred = null; $('#install-card').hidden = true; });
+window.addEventListener('appinstalled', () => { $('#install-card').hidden = true; toast('ติดตั้งแล้ว เปิดจากไอคอนบนหน้าจอโฮมได้เลย'); });
+if (!standalone && /iphone|ipad|ipod/i.test(navigator.userAgent)) { $('#install-card').hidden = false; $('#ios-tip').hidden = false; }
+if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(() => { });
+
+/* ---------------------------------------------------------------- boot */
+window.addEventListener('DOMContentLoaded', initFirebase);
+if (document.readyState !== 'loading') initFirebase();
+go(location.hash.slice(1) || 'listen', true);
+loadRef();
+observeReveal();
+})();
+
+</script>
+</body>
+</html>

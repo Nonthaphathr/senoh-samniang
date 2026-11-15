@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>เสนาะสำเนียง By ครูนนท์ | ฝึกอ่านทำนองเสนาะ</title>
+<meta name="description" content="ฟังต้นแบบ อ่านตาม แล้วให้ระบบสะท้อนผลการอ่านทำนองเสนาะรายวรรค กาพย์ กลอน โคลง ฉันท์ ร่าย">
+<meta name="theme-color" content="#13235a">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="เสนาะสำเนียง">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta property="og:title" content="เสนาะสำเนียง By ครูนนท์">
+<meta property="og:description" content="ฟังต้นแบบ อ่านตาม แล้วให้ระบบสะท้อนผลทำนองเสนาะรายวรรค">
+<meta property="og:image" content="assets/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Noto+Serif+Thai:wght@400..700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<a class="skip" href="#main">ข้ามไปยังเนื้อหา</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21M8.5 21h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-ear" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0116 0v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="3" y="14" width="4.5" height="6.5" rx="2" fill="currentColor"/><rect x="16.5" y="14" width="4.5" height="6.5" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 18l5-7 4 4 5-9 4 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 21h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-hist" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5.2l3.4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-diamond" viewBox="0 0 24 24"><path d="M12 2l10 10-10 10L2 12z" fill="currentColor"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#listen" aria-label="หน้าแรก เสนาะสำเนียง By ครูนนท์" style="color:inherit;text-decoration:none">
+      <img class="mini" src="assets/logo-256.png" width="40" height="40" alt="">
+      <span><span class="t1" style="display:block" id="brand-t1">เสนาะสำเนียง</span><span class="t2" id="brand-t2">By ครูนนท์ · ฝึกอ่านทำนองเสนาะ</span></span>
+    </a>
+    <nav aria-label="เมนูหลัก">
+      <button data-go="listen">ฟังต้นแบบ</button>
+      <button data-go="read">อ่านตาม</button>
+      <button data-go="result">ผลล่าสุด</button>
+      <button data-go="history">ประวัติ</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== ฟังต้นแบบ ===================== -->
+<section id="view-listen" class="view is-active" aria-labelledby="h-listen">
+  <div class="hero">
+    <div class="halo"><img src="assets/logo.png" width="480" height="480" alt="โลโก้เสนาะสำเนียง By ครูนนท์"></div>
+    <h1 id="h-listen">อ่านทำนองเสนาะให้ไพเราะ</h1>
+    <p>ฟังเสียงต้นแบบ อ่านตาม แล้วดูว่าเสียงสูงต่ำและจังหวะของเราใกล้เคียงต้นแบบแค่ไหน</p>
+    <ul class="steps"><li>๑ ฟังต้นแบบ</li><li>๒ อ่านตาม</li><li>๓ ดูผลสะท้อน</li></ul>
+    <div class="edge" aria-hidden="true"></div>
+  </div>
+
+  <div class="player" id="player" role="group" aria-label="เครื่องเล่นเสียงต้นแบบ">
+    <button class="play" id="btn-play" aria-label="เล่นหรือหยุดเสียงต้นแบบ"><svg class="i-play"><use href="#i-play"/></svg><svg class="i-pause"><use href="#i-pause"/></svg></button>
+    <div class="mid">
+      <div class="lbl"><b id="pl-title">เสียงต้นแบบทั้งบท</b><span id="pl-time">๐:๐๐</span></div>
+      <div class="track" id="track" role="slider" aria-label="ตำแหน่งเสียง" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+        <div class="bar"></div><div class="fill" id="tr-fill"></div><div id="tr-ticks"></div><div class="knob" id="tr-knob"></div>
+      </div>
+    </div>
+    <div class="speed" role="group" aria-label="ความเร็ว">
+      <button data-speed="0.75" aria-pressed="false">๐.๗๕×</button>
+      <button data-speed="1" aria-pressed="true">๑×</button>
+    </div>
+  </div>
+
+  <h2 class="sec"><span class="no"><span>๑</span></span>ตัวบทและเสียงต้นแบบ</h2>
+  <p class="lead" id="poem-title-wrap" style="margin-bottom:4px;font-weight:600;display:flex;align-items:center;gap:8px"><img id="poem-form-ic" src="assets/form-kap.png" width="36" height="36" alt=""><span id="poem-title"></span></p>
+  <div class="fld" id="poem-pick-wrap" hidden><label for="poem-pick">เลือกบทอ่าน</label><select id="poem-pick"></select></div>
+  <p class="lead">แตะวรรคใดก็ได้เพื่อฟังเฉพาะวรรคนั้น ตัวอักษรจะเรืองทองตามจังหวะของต้นแบบ เครื่องหมาย <span class="pause" style="margin:0 4px"></span> คือจุดเว้นจังหวะกลางวรรค</p>
+  <div class="card" id="verse-listen"></div>
+  <label class="loop"><input type="checkbox" id="chk-loop"> วนซ้ำเฉพาะวรรคที่เลือก</label>
+
+  <div class="rule" aria-hidden="true"><svg><use href="#i-diamond"/></svg></div>
+
+  <div class="card">
+    <h3 id="howto-h">กาพย์ยานี ๑๑ อ่านอย่างไร</h3>
+    <p class="note" style="margin:0" id="howto-p">หนึ่งวรรคมี ๕ หรือ ๖ คำ แบ่งจังหวะเป็น ๒ / ๓ หรือ ๓ / ๓ คำ เว้นเสียงเล็กน้อยตรงเครื่องหมาย <span class="pause" style="margin:0 3px"></span> แล้วทอดเสียงท้ายวรรคให้ต่อเนื่องก่อนเข้าวรรคถัดไป วรรคทั้งสี่ในแต่ละบทเรียกว่า สดับ · รับ · รอง · ส่ง</p>
+  </div>
+
+  <div class="card" id="install-card" hidden>
+    <h3>ติดตั้งลงหน้าจอโฮม</h3>
+    <p class="note" style="margin:0 0 10px">เปิดใช้งานได้เร็วเหมือนแอป พร้อมไอคอนโลโก้บนหน้าจอ</p>
+    <button class="btn gold" id="install-btn" hidden><svg><use href="#i-download"/></svg>ติดตั้งแอป</button>
+    <p class="note" id="ios-tip" style="margin:0" hidden>บน iPhone / iPad: แตะปุ่ม <b>แชร์</b> ในเบราว์เซอร์ Safari แล้วเลือก <b>เพิ่มไปยังหน้าจอโฮม</b></p>
+  </div>
+</section>
+
+<!-- ===================== อ่านตาม ===================== -->
+<section id="view-read" class="view" aria-labelledby="h-read">
+  <h2 class="sec" id="h-read" style="margin-top:22px"><span class="no"><span>๒</span></span>อ่านตามต้นแบบ</h2>
+  <p class="lead">เตรียมตัว ทดสอบไมค์ แล้วอ่านทั้ง <span id="n-units">๘</span> วรรคให้จบในครั้งเดียว ระบบจะวิเคราะห์ในเครื่องของเรา เสียงไม่ถูกอัปโหลดไปที่ใด</p>
+
+  <div class="card">
+    <h3>ผู้อ่าน</h3>
+    <div class="two">
+      <div class="fld"><label for="in-name">ชื่อ</label><input id="in-name" autocomplete="nickname" maxlength="40" placeholder="เช่น น้องฟ้า"></div>
+      <div class="fld"><label for="in-room">ห้อง</label><input id="in-room" maxlength="16" placeholder="เช่น ม.๓/๑"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>ทดสอบไมโครโฟน</h3>
+    <p class="note" style="margin:0">อยู่ในที่เงียบ ถือมือถือห่างปากประมาณ ๑ คืบ</p>
+    <div class="meter" id="meter" aria-hidden="true"></div>
+    <div class="status" id="mic-status" role="status"><span class="pill"></span><span id="mic-msg">ยังไม่ได้ทดสอบ</span></div>
+    <div style="margin-top:12px"><button class="btn ghost small" id="btn-mictest"><svg><use href="#i-mic"/></svg>ทดสอบไมค์</button></div>
+  </div>
+
+  <div class="card">
+    <h3>ตัวบท</h3>
+    <div id="verse-read"></div>
+    <div class="rec-wrap">
+      <button class="rec" id="btn-rec" aria-label="เริ่มหรือหยุดอัดเสียง"><svg class="i-mic"><use href="#i-mic"/></svg><svg class="i-stop"><use href="#i-stop"/></svg></button>
+      <div class="timer" id="rec-timer" aria-live="off">๐:๐๐</div>
+      <div class="note" id="rec-hint">แตะปุ่มเพื่อเริ่มอ่าน แตะอีกครั้งเมื่อจบวรรคสุดท้าย</div>
+      <span class="chip" id="ref-chip">กำลังเตรียมเสียงต้นแบบ…</span>
+    </div>
+    <div class="myrec" id="myrec"><strong>เสียงที่เพิ่งอัด</strong><audio id="my-audio" controls preload="metadata"></audio></div>
+  </div>
+</section>
+
+<!-- ===================== ผลล่าสุด ===================== -->
+<section id="view-result" class="view" aria-labelledby="h-result">
+  <h2 class="sec" id="h-result" style="margin-top:22px"><span class="no"><span>๓</span></span>ผลการอ่านล่าสุด</h2>
+  <div id="result-empty" class="card empty">
+    <img src="assets/empty.png" width="120" height="120" alt="">
+    <p style="margin:0 0 12px">ยังไม่มีผลการอ่าน ลองฟังต้นแบบแล้วอ่านตามสักรอบ</p>
+    <button class="btn gold" data-go="read"><svg><use href="#i-mic"/></svg>ไปอ่านตาม</button>
+  </div>
+  <div id="result-body" hidden></div>
+</section>
+
+<!-- ===================== ประวัติ ===================== -->
+<section id="view-history" class="view" aria-labelledby="h-history">
+  <h2 class="sec" id="h-history" style="margin-top:22px"><span class="no"><span>๔</span></span>ความก้าวหน้าของฉัน</h2>
+  <div class="card" id="hist-card">
+    <div class="chartbox" id="hist-chart" hidden></div>
+    <ul class="hist" id="hist-list"></ul>
+    <p class="note" id="hist-empty" style="margin:0">ยังไม่มีประวัติ เมื่ออ่านแล้วผลจะถูกบันทึกที่นี่โดยอัตโนมัติ</p>
+    <p class="note" id="hist-sync" style="margin:10px 0 0"></p>
+  </div>
+</section>
+
+<!-- ===================== ครู ===================== -->
+<section id="view-teacher" class="view" aria-labelledby="h-teacher">
+  <h2 class="sec" id="h-teacher" style="margin-top:22px">กระดานครู</h2>
+  <div class="card">
+    <p class="note" style="margin:0 0 10px" id="t-msg">เข้าสู่ระบบด้วยบัญชี Google ของครูเพื่อดูผลการอ่านของนักเรียนทุกคน</p>
+    <div class="acts">
+      <button class="btn small" id="t-login">เข้าสู่ระบบด้วย Google</button>
+      <button class="btn small ghost" id="t-csv" hidden>ดาวน์โหลด CSV</button>
+    </div>
+    <div class="fld" id="t-filter" hidden><label for="t-room">กรองตามห้อง</label><input id="t-room" placeholder="เช่น ม.๓/๑ (เว้นว่างเพื่อดูทั้งหมด)"></div>
+    <div class="tbl-wrap" id="t-tbl" hidden style="margin-top:10px"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="krajang" style="margin-bottom:8px" aria-hidden="true"></div>
+  <p style="margin:0">คะแนนคือ “ความใกล้เคียงกับเสียงต้นแบบ” ไม่ใช่ความถูกผิดสมบูรณ์ ทำนองเสนาะที่ไพเราะมีได้หลายแบบ</p>
+  <p style="margin:6px 0 0">พัฒนาโดย ครูนนทพัทธ์ หิรัญเรือง · โรงเรียนกระดุมทองวิทยา · <a href="#teacher" id="a-teacher"><img src="assets/btn-teacher.png" width="18" height="18" alt="" style="vertical-align:-3px"> สำหรับครู</a></p>
+</footer>
+
+<nav class="tabbar" aria-label="เมนูหลัก">
+  <button data-go="listen"><img class="ti" src="assets/btn-listen.png" alt="">ฟังต้นแบบ</button>
+  <button data-go="read"><img class="ti" src="assets/btn-record.png" alt="">อ่านตาม</button>
+  <button data-go="result"><img class="ti" src="assets/btn-result.png" alt="">ผลล่าสุด<i class="dot"></i></button>
+  <button data-go="history"><img class="ti" src="assets/btn-history.png" alt="">ประวัติ</button>
+</nav>
+
+<div class="overlay" id="analyzing" role="alertdialog" aria-live="polite" aria-label="กำลังวิเคราะห์เสียง">
+  <div>
+    <svg class="rosette" viewBox="0 0 120 120" aria-hidden="true"><g fill="currentColor">
+      <path class="p" d="M60 58C47 46 47 24 60 8C73 24 73 46 60 58Z"/>
+      <path class="p" transform="rotate(90 60 60)" d="M60 58C47 46 47 24 60 8C73 24 73 46 60 58Z"/>
+      <path class="p" transform="rotate(180 60 60)" d="M60 58C47 46 47 24 60 8C73 24 73 46 60 58Z"/>
+      <path class="p" transform="rotate(270 60 60)" d="M60 58C47 46 47 24 60 8C73 24 73 46 60 58Z"/></g>
+      <circle cx="60" cy="60" r="6" fill="#f6d884"/></svg>
+    <h3>กำลังฟังเสียงของเรา</h3>
+    <p id="an-step">เตรียมเสียงที่อัด…</p>
+  </div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js" defer></script>
+<script src="js/config.js" defer></script>
+<script src="js/forms.js" defer></script>
+<script src="js/analyzer.js" defer></script>
+<script src="js/segment.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/student.js" defer></script>
+<script src="js/teacher.js" defer></script>
+</body>
+</html>
