@@ -12,7 +12,7 @@ window.APP_CONFIG = {
     messagingSenderId: '532949998243',
     appId: '1:532949998243:web:a6ae974b35f488de10fd16'
   },
-  GAS_URL: '',                                // URL ของ GAS Web App (ช่วง 3)
+  GAS_URL: 'https://script.google.com/macros/s/AKfycbyppbc3RkmTc21b_J94aqR1bsBkRde0e6FHO5kRCP8dwZbahd6DOdvK7eKFU9-rYVqi3g/exec',                                // URL ของ GAS Web App (ช่วง 3)
   POEM_INDEX: 'poems/index.json',             // รายการบทอ่านในเครื่อง (ใช้ได้โดยไม่ต้องมี Firebase)
   DEFAULT_POEM: 'yani11',                     // เปลี่ยนบทได้ด้วย ?poem=<id> → poems/<id>.json
   COLLECTION: 'attempts',
